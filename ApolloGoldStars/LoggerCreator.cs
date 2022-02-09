@@ -12,10 +12,12 @@ namespace ApolloGoldStars
 {
     public partial class LoggerCreator : Form
     {
+        string m_sCardName = "";
         public LoggerCreator(string sCardName)
         {
             InitializeComponent();
             this.Text = sCardName + " Logger Creator";
+            m_sCardName = sCardName;
             FileNameLabel.Hide();
             FilePathLabel.Hide();
             saveToFilecheckBox.Enabled = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
@@ -62,10 +64,22 @@ namespace ApolloGoldStars
                 sOutput += MainForm.connection.AlaramPortList(portClearhis.Checked, list);
             }
 
+            if(UserCommandsCheckBox.Checked && userCommandsTextBox.Text!= "")
+            {
+                sOutput += MainForm.connection.UserDbgCommands(userCommandsTextBox.Text.Split("\r\n").ToList());
+            }
 
-            if(saveToFilecheckBox.Checked)
+
+            if (saveToFilecheckBox.Checked)
             {
                 SaveToFile(sOutput);
+            }
+            if(ShowToScreenCheckBox.Checked)
+            {
+                LoggerCreatorOutput loggerCreatorOutput = new LoggerCreatorOutput(sOutput, m_sCardName);
+                this.Hide();
+                loggerCreatorOutput.ShowDialog();
+                this.Show();
             }
         }
 
@@ -82,11 +96,10 @@ namespace ApolloGoldStars
         private void SaveToFile(string sOutput)
         {
             string path = FilePathLabel.Text; // This text is added only once to the file.
-            if (!File.Exists(path)) 
-            {// Create a file to write to.
+
             string createText = sOutput; 
-            File.WriteAllText(path, createText, Encoding.UTF8); 
-            }
+            File.WriteAllText(path, createText, Encoding.UTF8);
+            MessageBox.Show("file " + path + " successfully created");
         }
     }
 }
