@@ -65,18 +65,18 @@ namespace ApolloGoldStars
             Dispose(false);
         }
 
-        public void LogShow()
+        public string LogShow()
         {
             if (GoToDbg())
             {
                 telnet.WriteLine("logshow");
                 string s = telnet.Read();
-
-                string path = @"c:\temp\MyTest.txt"; // This text is added only once to the file.
-                if (!File.Exists(path)) { // Create a file to write to.
-                string createText = s; 
-                File.WriteAllText(path, createText, Encoding.UTF8); }
                 OutFromDbg();
+                return s;            
+            }
+            else
+            {
+                return "";
             }
         }
 
