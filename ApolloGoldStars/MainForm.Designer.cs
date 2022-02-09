@@ -71,6 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(39, 229);
             this.label2.Name = "label2";
@@ -123,8 +124,8 @@
             this.UsernameBox.PlaceholderText = "username";
             this.UsernameBox.Size = new System.Drawing.Size(248, 55);
             this.UsernameBox.TabIndex = 8;
-            this.UsernameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UsernameBox.Text = "root";
+            this.UsernameBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PasswordBox
             // 
@@ -136,10 +137,9 @@
             this.PasswordBox.PlaceholderText = "Password";
             this.PasswordBox.Size = new System.Drawing.Size(248, 55);
             this.PasswordBox.TabIndex = 10;
+            this.PasswordBox.Text = "Manor441";
             this.PasswordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PasswordBox.UseSystemPasswordChar = true;
-            this.PasswordBox.Text = "Manor441";
-            //this.PasswordBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnKeyPress);
             // 
             // PortNum
             // 
@@ -191,9 +191,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Plum;
+            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.rbbn_logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(896, 487);
+            this.ClientSize = new System.Drawing.Size(1026, 553);
             this.Controls.Add(this.ProtocolBox);
             this.Controls.Add(this.PortNum);
             this.Controls.Add(this.label3);
