@@ -33,6 +33,7 @@ namespace ApolloGoldStars
         public void OutFromDbg()
         {
             telnet.WriteLine("exit");
+            System.Threading.Thread.Sleep(1000);
         }
 
         public bool GoToDbg()
@@ -71,6 +72,8 @@ namespace ApolloGoldStars
             {
                 telnet.WriteLine("logshow");
                 string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
                 OutFromDbg();
                 return s;            
             }
@@ -92,6 +95,8 @@ namespace ApolloGoldStars
                 }
                 telnet.WriteLine("almall");
                 string s = telnet.Read();
+                s = s.Replace("\0","");
+                s = s.Substring(s.IndexOf("\n"));
                 OutFromDbg();
                 return s;
             }

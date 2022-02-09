@@ -152,6 +152,7 @@
             this.FilePathLabel.Name = "FilePathLabel";
             this.FilePathLabel.Size = new System.Drawing.Size(0, 15);
             this.FilePathLabel.TabIndex = 10;
+            this.FilePathLabel.TextChanged += new System.EventHandler(this.FileNameLabel_Change);
             // 
             // openFileDialogButton
             // 

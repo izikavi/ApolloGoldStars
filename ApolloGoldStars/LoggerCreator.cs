@@ -18,7 +18,8 @@ namespace ApolloGoldStars
             this.Text = sCardName + " Logger Creator";
             FileNameLabel.Hide();
             FilePathLabel.Hide();
-            saveToFilecheckBox.Enabled = false;
+            saveToFilecheckBox.Enabled = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
+            saveToFilecheckBox.Checked = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
             //string sLogShow  = MainForm.connection.LogShow();
             //sLogShow = sLogShow.Replace("\0","");
             //label1.Text = sLogShow.Substring(sLogShow.IndexOf("\n"));
@@ -64,13 +65,28 @@ namespace ApolloGoldStars
 
             if(saveToFilecheckBox.Checked)
             {
-
+                SaveToFile(sOutput);
             }
         }
 
         private void LoggerCreator_Load(object sender, EventArgs e)
         {
-            saveToFilecheckBox.Checked = true;
+        }
+
+        private void FileNameLabel_Change(object sender, EventArgs e)
+        {
+            saveToFilecheckBox.Enabled = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
+            saveToFilecheckBox.Checked = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
+        }
+
+        private void SaveToFile(string sOutput)
+        {
+            string path = FilePathLabel.Text; // This text is added only once to the file.
+            if (!File.Exists(path)) 
+            {// Create a file to write to.
+            string createText = sOutput; 
+            File.WriteAllText(path, createText, Encoding.UTF8); 
+            }
         }
     }
 }
