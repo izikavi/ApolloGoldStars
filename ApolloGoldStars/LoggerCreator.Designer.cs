@@ -32,7 +32,7 @@
             this.ShowAlarm = new System.Windows.Forms.CheckBox();
             this.ShowAlarmonport = new System.Windows.Forms.CheckBox();
             this.ShowConfiguration = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.clearHisAll = new System.Windows.Forms.CheckBox();
             this.portCheckBox = new System.Windows.Forms.TextBox();
             this.ShowPerfomanceMonitorting = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
@@ -43,10 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveToFilecheckBox = new System.Windows.Forms.CheckBox();
+            this.GenerateButton = new System.Windows.Forms.Button();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.portClearhis = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // ShowErrors
@@ -54,9 +55,9 @@
             this.ShowErrors.AutoSize = true;
             this.ShowErrors.Location = new System.Drawing.Point(48, 31);
             this.ShowErrors.Name = "ShowErrors";
-            this.ShowErrors.Size = new System.Drawing.Size(88, 19);
+            this.ShowErrors.Size = new System.Drawing.Size(108, 19);
             this.ShowErrors.TabIndex = 0;
-            this.ShowErrors.Text = "Show Errors\t";
+            this.ShowErrors.Text = "Show SW Errors\t";
             this.ShowErrors.UseVisualStyleBackColor = true;
             // 
             // ShowAlarm
@@ -89,15 +90,15 @@
             this.ShowConfiguration.Text = "Show Configuration \t";
             this.ShowConfiguration.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // clearHisAll
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(139, 56);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(138, 19);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "clearhis before almall";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.clearHisAll.AutoSize = true;
+            this.clearHisAll.Location = new System.Drawing.Point(139, 56);
+            this.clearHisAll.Name = "clearHisAll";
+            this.clearHisAll.Size = new System.Drawing.Size(138, 19);
+            this.clearHisAll.TabIndex = 4;
+            this.clearHisAll.Text = "clearhis before almall";
+            this.clearHisAll.UseVisualStyleBackColor = true;
             // 
             // portCheckBox
             // 
@@ -141,18 +142,16 @@
             this.FileNameLabel.AutoSize = true;
             this.FileNameLabel.Location = new System.Drawing.Point(598, 28);
             this.FileNameLabel.Name = "FileNameLabel";
-            this.FileNameLabel.Size = new System.Drawing.Size(38, 15);
+            this.FileNameLabel.Size = new System.Drawing.Size(0, 15);
             this.FileNameLabel.TabIndex = 9;
-            this.FileNameLabel.Text = "label1";
             // 
             // FilePathLabel
             // 
             this.FilePathLabel.AutoSize = true;
             this.FilePathLabel.Location = new System.Drawing.Point(599, 60);
             this.FilePathLabel.Name = "FilePathLabel";
-            this.FilePathLabel.Size = new System.Drawing.Size(38, 15);
+            this.FilePathLabel.Size = new System.Drawing.Size(0, 15);
             this.FilePathLabel.TabIndex = 10;
-            this.FilePathLabel.Text = "label1";
             // 
             // openFileDialogButton
             // 
@@ -192,24 +191,25 @@
             this.checkBox2.Text = "Show to screen";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // saveToFilecheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(289, 296);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(83, 19);
-            this.checkBox3.TabIndex = 16;
-            this.checkBox3.Text = "Save to file";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.saveToFilecheckBox.AutoSize = true;
+            this.saveToFilecheckBox.Location = new System.Drawing.Point(289, 296);
+            this.saveToFilecheckBox.Name = "saveToFilecheckBox";
+            this.saveToFilecheckBox.Size = new System.Drawing.Size(83, 19);
+            this.saveToFilecheckBox.TabIndex = 16;
+            this.saveToFilecheckBox.Text = "Save to file";
+            this.saveToFilecheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // GenerateButton
             // 
-            this.button1.Location = new System.Drawing.Point(639, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Generate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.GenerateButton.Location = new System.Drawing.Point(639, 292);
+            this.GenerateButton.Name = "GenerateButton";
+            this.GenerateButton.Size = new System.Drawing.Size(75, 23);
+            this.GenerateButton.TabIndex = 17;
+            this.GenerateButton.Text = "Generate";
+            this.GenerateButton.UseVisualStyleBackColor = true;
+            this.GenerateButton.Click += new System.EventHandler(this.GenerateButton_Click);
             // 
             // checkBox4
             // 
@@ -229,16 +229,27 @@
             this.textBox1.Size = new System.Drawing.Size(226, 61);
             this.textBox1.TabIndex = 19;
             // 
+            // portClearhis
+            // 
+            this.portClearhis.AutoSize = true;
+            this.portClearhis.Location = new System.Drawing.Point(304, 81);
+            this.portClearhis.Name = "portClearhis";
+            this.portClearhis.Size = new System.Drawing.Size(138, 19);
+            this.portClearhis.TabIndex = 20;
+            this.portClearhis.Text = "clearhis before almall";
+            this.portClearhis.UseVisualStyleBackColor = true;
+            // 
             // LoggerCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.portClearhis);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.GenerateButton);
+            this.Controls.Add(this.saveToFilecheckBox);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -249,13 +260,14 @@
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.ShowPerfomanceMonitorting);
             this.Controls.Add(this.portCheckBox);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.clearHisAll);
             this.Controls.Add(this.ShowConfiguration);
             this.Controls.Add(this.ShowAlarmonport);
             this.Controls.Add(this.ShowAlarm);
             this.Controls.Add(this.ShowErrors);
             this.Name = "LoggerCreator";
             this.Text = "LoggerCreator";
+            this.Load += new System.EventHandler(this.LoggerCreator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +279,7 @@
         private CheckBox ShowAlarm;
         private CheckBox ShowAlarmonport;
         private CheckBox ShowConfiguration;
-        private CheckBox checkBox1;
+        private CheckBox clearHisAll;
         private TextBox portCheckBox;
         private CheckBox ShowPerfomanceMonitorting;
         private CheckBox checkBox6;
@@ -278,9 +290,10 @@
         private Label label1;
         private Label label2;
         private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private Button button1;
+        private CheckBox saveToFilecheckBox;
+        private Button GenerateButton;
         private CheckBox checkBox4;
         private TextBox textBox1;
+        private CheckBox portClearhis;
     }
 }

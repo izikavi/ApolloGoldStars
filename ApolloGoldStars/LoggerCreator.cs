@@ -18,6 +18,7 @@ namespace ApolloGoldStars
             this.Text = sCardName + " Logger Creator";
             FileNameLabel.Hide();
             FilePathLabel.Hide();
+            saveToFilecheckBox.Enabled = false;
             //string sLogShow  = MainForm.connection.LogShow();
             //sLogShow = sLogShow.Replace("\0","");
             //label1.Text = sLogShow.Substring(sLogShow.IndexOf("\n"));
@@ -41,6 +42,35 @@ namespace ApolloGoldStars
                 FileNameLabel.Text = saveFileDialog1.FileName.Substring(saveFileDialog1.FileName.LastIndexOf("\\")+1);
                 FilePathLabel.Text = saveFileDialog1.FileName;
             }
+        }
+
+        private void GenerateButton_Click(object sender, EventArgs e)
+        {
+            string sOutput = "";
+            if(ShowErrors.Checked)
+            {
+                sOutput += MainForm.connection.LogShow();
+            }
+            if(ShowAlarm.Checked)
+            {
+                sOutput += MainForm.connection.AlaramAll(clearHisAll.Checked);
+            }
+            if(ShowAlarmonport.Checked)
+            {
+                List<string> list = portCheckBox.Text.Split(",").ToList();
+                sOutput += MainForm.connection.AlaramPortList(portClearhis.Checked, list);
+            }
+
+
+            if(saveToFilecheckBox.Checked)
+            {
+
+            }
+        }
+
+        private void LoggerCreator_Load(object sender, EventArgs e)
+        {
+            saveToFilecheckBox.Checked = true;
         }
     }
 }

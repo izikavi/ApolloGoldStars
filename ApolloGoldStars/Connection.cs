@@ -80,6 +80,54 @@ namespace ApolloGoldStars
             }
         }
 
+        public string AlaramAll(bool bIsClearhis)
+        {
+            if (GoToDbg())
+            {
+                if(bIsClearhis)
+                {
+                    telnet.WriteLine("clearhis all");
+                    System.Threading.Thread.Sleep(1000);
+
+                }
+                telnet.WriteLine("almall");
+                string s = telnet.Read();
+                OutFromDbg();
+                return s;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        public string AlaramPortList(bool bIsClearhis,List<string> ports)
+        {
+            if (GoToDbg())
+            {
+                if (bIsClearhis)
+                {
+                    telnet.WriteLine("clearhis all");
+                    System.Threading.Thread.Sleep(1000);
+
+                }
+                string sPortOutput = ""; 
+                foreach (string port in ports)
+                {
+                    telnet.WriteLine("showalarms port " + port);
+                    sPortOutput += telnet.Read();
+                    System.Threading.Thread.Sleep(100);
+                }
+
+                OutFromDbg();
+                return sPortOutput;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
