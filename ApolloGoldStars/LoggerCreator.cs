@@ -61,15 +61,6 @@ namespace ApolloGoldStars
                 List<string> list = portCheckBox.Text.Split(",").ToList();
                 sOutput += MainForm.connection.AlaramPortList(portClearhis.Checked, list);
             }
-            if(ShowPerfomanceMonitorting.Checked && pmDispTextBox.Text != "")
-            {
-                sOutput += MainForm.connection.Pmdisp(pmDispTextBox.Text);
-            }
-
-            if (ShowBIT.Checked && bitDispTextBox.Text != "")
-            {
-                sOutput += MainForm.connection.Bitdisp(bitDispTextBox.Text);
-            }
 
             if(UserCommandsCheckBox.Checked && userCommandsTextBox.Text!= "")
             {

@@ -34,9 +34,6 @@
             this.ShowAlarmonport = new System.Windows.Forms.CheckBox();
             this.clearHisAll = new System.Windows.Forms.CheckBox();
             this.portCheckBox = new System.Windows.Forms.TextBox();
-            this.ShowPerfomanceMonitorting = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.ShowBIT = new System.Windows.Forms.CheckBox();
             this.FileNameLabel = new System.Windows.Forms.Label();
             this.FilePathLabel = new System.Windows.Forms.Label();
             this.openFileDialogButton = new System.Windows.Forms.Button();
@@ -48,8 +45,6 @@
             this.UserCommandsCheckBox = new System.Windows.Forms.CheckBox();
             this.userCommandsTextBox = new System.Windows.Forms.TextBox();
             this.portClearhis = new System.Windows.Forms.CheckBox();
-            this.pmDispTextBox = new System.Windows.Forms.TextBox();
-            this.bitDispTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // ShowErrors
@@ -57,7 +52,7 @@
             this.ShowErrors.AutoSize = true;
             this.ShowErrors.BackColor = System.Drawing.Color.Transparent;
             this.ShowErrors.Location = new System.Drawing.Point(29, 95);
-            this.ShowErrors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowErrors.Margin = new System.Windows.Forms.Padding(2);
             this.ShowErrors.Name = "ShowErrors";
             this.ShowErrors.Size = new System.Drawing.Size(108, 19);
             this.ShowErrors.TabIndex = 0;
@@ -69,7 +64,7 @@
             this.ShowAlarm.AutoSize = true;
             this.ShowAlarm.BackColor = System.Drawing.Color.Transparent;
             this.ShowAlarm.Location = new System.Drawing.Point(29, 110);
-            this.ShowAlarm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAlarm.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAlarm.Name = "ShowAlarm";
             this.ShowAlarm.Size = new System.Drawing.Size(90, 19);
             this.ShowAlarm.TabIndex = 1;
@@ -81,7 +76,7 @@
             this.ShowAlarmonport.AutoSize = true;
             this.ShowAlarmonport.BackColor = System.Drawing.Color.Transparent;
             this.ShowAlarmonport.Location = new System.Drawing.Point(29, 127);
-            this.ShowAlarmonport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAlarmonport.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAlarmonport.Name = "ShowAlarmonport";
             this.ShowAlarmonport.Size = new System.Drawing.Size(132, 19);
             this.ShowAlarmonport.TabIndex = 2;
@@ -93,7 +88,7 @@
             this.clearHisAll.AutoSize = true;
             this.clearHisAll.BackColor = System.Drawing.Color.Transparent;
             this.clearHisAll.Location = new System.Drawing.Point(147, 110);
-            this.clearHisAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clearHisAll.Margin = new System.Windows.Forms.Padding(2);
             this.clearHisAll.Name = "clearHisAll";
             this.clearHisAll.Size = new System.Drawing.Size(138, 19);
             this.clearHisAll.TabIndex = 4;
@@ -103,46 +98,10 @@
             // portCheckBox
             // 
             this.portCheckBox.Location = new System.Drawing.Point(172, 125);
-            this.portCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.portCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.portCheckBox.Name = "portCheckBox";
             this.portCheckBox.Size = new System.Drawing.Size(71, 23);
             this.portCheckBox.TabIndex = 5;
-            // 
-            // ShowPerfomanceMonitorting
-            // 
-            this.ShowPerfomanceMonitorting.AutoSize = true;
-            this.ShowPerfomanceMonitorting.BackColor = System.Drawing.Color.Transparent;
-            this.ShowPerfomanceMonitorting.Location = new System.Drawing.Point(29, 148);
-            this.ShowPerfomanceMonitorting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ShowPerfomanceMonitorting.Name = "ShowPerfomanceMonitorting";
-            this.ShowPerfomanceMonitorting.Size = new System.Drawing.Size(189, 19);
-            this.ShowPerfomanceMonitorting.TabIndex = 6;
-            this.ShowPerfomanceMonitorting.Text = "Show Perfomance Monitorting\t";
-            this.ShowPerfomanceMonitorting.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Location = new System.Drawing.Point(29, 164);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(101, 19);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "Show Statuses\t";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // ShowBIT
-            // 
-            this.ShowBIT.AutoSize = true;
-            this.ShowBIT.BackColor = System.Drawing.Color.Transparent;
-            this.ShowBIT.Location = new System.Drawing.Point(29, 185);
-            this.ShowBIT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ShowBIT.Name = "ShowBIT";
-            this.ShowBIT.Size = new System.Drawing.Size(77, 19);
-            this.ShowBIT.TabIndex = 8;
-            this.ShowBIT.Text = "Show BIT \t";
-            this.ShowBIT.UseVisualStyleBackColor = false;
             // 
             // FileNameLabel
             // 
@@ -168,7 +127,7 @@
             // openFileDialogButton
             // 
             this.openFileDialogButton.Location = new System.Drawing.Point(512, 164);
-            this.openFileDialogButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.openFileDialogButton.Margin = new System.Windows.Forms.Padding(2);
             this.openFileDialogButton.Name = "openFileDialogButton";
             this.openFileDialogButton.Size = new System.Drawing.Size(111, 38);
             this.openFileDialogButton.TabIndex = 11;
@@ -202,7 +161,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Location = new System.Drawing.Point(264, 263);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(106, 19);
             this.checkBox2.TabIndex = 15;
@@ -214,7 +173,7 @@
             this.saveToFilecheckBox.AutoSize = true;
             this.saveToFilecheckBox.BackColor = System.Drawing.Color.Transparent;
             this.saveToFilecheckBox.Location = new System.Drawing.Point(172, 263);
-            this.saveToFilecheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveToFilecheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.saveToFilecheckBox.Name = "saveToFilecheckBox";
             this.saveToFilecheckBox.Size = new System.Drawing.Size(83, 19);
             this.saveToFilecheckBox.TabIndex = 16;
@@ -224,7 +183,7 @@
             // GenerateButton
             // 
             this.GenerateButton.Location = new System.Drawing.Point(398, 261);
-            this.GenerateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateButton.Margin = new System.Windows.Forms.Padding(2);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(91, 28);
             this.GenerateButton.TabIndex = 17;
@@ -236,8 +195,8 @@
             // 
             this.UserCommandsCheckBox.AutoSize = true;
             this.UserCommandsCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.UserCommandsCheckBox.Location = new System.Drawing.Point(29, 200);
-            this.UserCommandsCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserCommandsCheckBox.Location = new System.Drawing.Point(29, 164);
+            this.UserCommandsCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.UserCommandsCheckBox.Name = "UserCommandsCheckBox";
             this.UserCommandsCheckBox.Size = new System.Drawing.Size(153, 19);
             this.UserCommandsCheckBox.TabIndex = 18;
@@ -246,8 +205,8 @@
             // 
             // userCommandsTextBox
             // 
-            this.userCommandsTextBox.Location = new System.Drawing.Point(186, 208);
-            this.userCommandsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userCommandsTextBox.Location = new System.Drawing.Point(186, 164);
+            this.userCommandsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.userCommandsTextBox.Multiline = true;
             this.userCommandsTextBox.Name = "userCommandsTextBox";
             this.userCommandsTextBox.Size = new System.Drawing.Size(159, 38);
@@ -258,26 +217,12 @@
             this.portClearhis.AutoSize = true;
             this.portClearhis.BackColor = System.Drawing.Color.Transparent;
             this.portClearhis.Location = new System.Drawing.Point(246, 126);
-            this.portClearhis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.portClearhis.Margin = new System.Windows.Forms.Padding(2);
             this.portClearhis.Name = "portClearhis";
             this.portClearhis.Size = new System.Drawing.Size(138, 19);
             this.portClearhis.TabIndex = 20;
             this.portClearhis.Text = "clearhis before almall";
             this.portClearhis.UseVisualStyleBackColor = false;
-            // 
-            // pmDispTextBox
-            // 
-            this.pmDispTextBox.Location = new System.Drawing.Point(226, 150);
-            this.pmDispTextBox.Name = "pmDispTextBox";
-            this.pmDispTextBox.Size = new System.Drawing.Size(100, 23);
-            this.pmDispTextBox.TabIndex = 21;
-            // 
-            // bitDispTextBox
-            // 
-            this.bitDispTextBox.Location = new System.Drawing.Point(111, 183);
-            this.bitDispTextBox.Name = "bitDispTextBox";
-            this.bitDispTextBox.Size = new System.Drawing.Size(100, 23);
-            this.bitDispTextBox.TabIndex = 22;
             // 
             // LoggerCreator
             // 
@@ -288,8 +233,6 @@
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(661, 302);
-            this.Controls.Add(this.bitDispTextBox);
-            this.Controls.Add(this.pmDispTextBox);
             this.Controls.Add(this.portClearhis);
             this.Controls.Add(this.userCommandsTextBox);
             this.Controls.Add(this.UserCommandsCheckBox);
@@ -301,9 +244,6 @@
             this.Controls.Add(this.openFileDialogButton);
             this.Controls.Add(this.FilePathLabel);
             this.Controls.Add(this.FileNameLabel);
-            this.Controls.Add(this.ShowBIT);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.ShowPerfomanceMonitorting);
             this.Controls.Add(this.portCheckBox);
             this.Controls.Add(this.clearHisAll);
             this.Controls.Add(this.ShowAlarmonport);
@@ -311,7 +251,7 @@
             this.Controls.Add(this.ShowErrors);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoggerCreator";
             this.Text = "LoggerCreator";
             this.Load += new System.EventHandler(this.LoggerCreator_Load);
@@ -327,9 +267,6 @@
         private CheckBox ShowAlarmonport;
         private CheckBox clearHisAll;
         private TextBox portCheckBox;
-        private CheckBox ShowPerfomanceMonitorting;
-        private CheckBox checkBox6;
-        private CheckBox ShowBIT;
         private Label FileNameLabel;
         private Label FilePathLabel;
         private Button openFileDialogButton;
@@ -341,7 +278,5 @@
         private CheckBox UserCommandsCheckBox;
         private TextBox userCommandsTextBox;
         private CheckBox portClearhis;
-        private TextBox pmDispTextBox;
-        private TextBox bitDispTextBox;
     }
 }

@@ -70,12 +70,14 @@ namespace ApolloGoldStars
         {
             if (GoToDbg())
             {
+                string sOutPut = "*************logshow*************";
                 telnet.WriteLine("logshow");
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
                 s = s.Substring(s.IndexOf("\n"));
+                sOutPut += s;
                 OutFromDbg();
-                return s;            
+                return sOutPut;            
             }
             else
             {
@@ -87,7 +89,8 @@ namespace ApolloGoldStars
         {
             if (GoToDbg())
             {
-                if(bIsClearhis)
+                string sOutPut = "*************almall*************";
+                if (bIsClearhis)
                 {
                     telnet.WriteLine("clearhis all");
                     System.Threading.Thread.Sleep(1000);
@@ -97,8 +100,9 @@ namespace ApolloGoldStars
                 string s = telnet.Read();
                 s = s.Replace("\0","");
                 s = s.Substring(s.IndexOf("\n"));
+                sOutPut += s;
                 OutFromDbg();
-                return s;
+                return sOutPut;
             }
             else
             {
@@ -119,6 +123,7 @@ namespace ApolloGoldStars
                 string sPortOutput = ""; 
                 foreach (string port in ports)
                 {
+                    sPortOutput += "*************showalarms port " + port+ "*************";
                     telnet.WriteLine("showalarms port " + port);
                     sPortOutput += telnet.Read();
                     System.Threading.Thread.Sleep(100);
@@ -175,13 +180,14 @@ namespace ApolloGoldStars
                 string sOutput = "";
                 foreach (string cmd in listDbgCommands)
                 {
+                    sOutput += "*************"+cmd+"*************";
                     telnet.WriteLine(cmd);
                     s = telnet.Read();
                     s = s.Replace("\0", "");
                     s = s.Substring(s.IndexOf("\n"));
 
                     sOutput += s;
-                    System.Threading.Thread.Sleep(100);
+                    System.Threading.Thread.Sleep(1000);
                 }
                 OutFromDbg();
                 return sOutput;
