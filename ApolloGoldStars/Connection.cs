@@ -229,10 +229,13 @@ namespace ApolloGoldStars
 
             if (GoToDbg())
             {
+                telnet.WriteLine("ClearTimeCollection");
+                System.Threading.Thread.Sleep(100); // sec
                 telnet.WriteLine("SetTickTimeCollection 1");
+                telnet.Read();
                 for (int i = 0; i < sec; i++)
                 {
-                    System.Threading.Thread.Sleep(1000); // sec
+                    System.Threading.Thread.Sleep(1200); // sec
                     telnet.WriteLine("PeractStat");
                     string s = telnet.Read();
                     s = s.Replace("\0", "");
