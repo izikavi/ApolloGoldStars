@@ -133,6 +133,65 @@ namespace ApolloGoldStars
             }
         }
 
+        public string Pmdisp(string sUserInput)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("pmdisp "+sUserInput);
+                string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                OutFromDbg();
+                return s;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        public string Bitdisp(string sUserInput)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("bitdisp " + sUserInput);
+                string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                OutFromDbg();
+                return s;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
+        public string UserDbgCommands(List<string> listDbgCommands)
+        {
+            if (GoToDbg())
+            {
+                string s = "";
+                string sOutput = "";
+                foreach (string cmd in listDbgCommands)
+                {
+                    telnet.WriteLine(cmd);
+                    s = telnet.Read();
+                    s = s.Replace("\0", "");
+                    s = s.Substring(s.IndexOf("\n"));
+
+                    sOutput += s;
+                    System.Threading.Thread.Sleep(100);
+                }
+                OutFromDbg();
+                return sOutput;
+            }
+            else
+            {
+                return "";
+            }
+        }
+
         protected virtual void Dispose(bool disposing)
         {
             if (disposing)
