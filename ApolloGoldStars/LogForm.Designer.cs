@@ -46,7 +46,7 @@
             // 
             // PerformanceAnalyzer
             // 
-            this.PerformanceAnalyzer.Location = new System.Drawing.Point(56, 160);
+            this.PerformanceAnalyzer.Location = new System.Drawing.Point(329, 28);
             this.PerformanceAnalyzer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PerformanceAnalyzer.Name = "PerformanceAnalyzer";
             this.PerformanceAnalyzer.Size = new System.Drawing.Size(200, 65);
@@ -58,6 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Plum;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.rbbn_logo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(896, 487);
