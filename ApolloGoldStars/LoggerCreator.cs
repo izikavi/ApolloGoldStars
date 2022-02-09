@@ -61,9 +61,23 @@ namespace ApolloGoldStars
                 List<string> list = portCheckBox.Text.Split(",").ToList();
                 sOutput += MainForm.connection.AlaramPortList(portClearhis.Checked, list);
             }
+            if(ShowPerfomanceMonitorting.Checked && pmDispTextBox.Text != "")
+            {
+                sOutput += MainForm.connection.Pmdisp(pmDispTextBox.Text);
+            }
+
+            if (ShowBIT.Checked && bitDispTextBox.Text != "")
+            {
+                sOutput += MainForm.connection.Bitdisp(bitDispTextBox.Text);
+            }
+
+            if(UserCommandsCheckBox.Checked && userCommandsTextBox.Text!= "")
+            {
+                sOutput += MainForm.connection.UserDbgCommands(userCommandsTextBox.Text.Split("\r\n").ToList());
+            }
 
 
-            if(saveToFilecheckBox.Checked)
+            if (saveToFilecheckBox.Checked)
             {
                 SaveToFile(sOutput);
             }
@@ -82,11 +96,10 @@ namespace ApolloGoldStars
         private void SaveToFile(string sOutput)
         {
             string path = FilePathLabel.Text; // This text is added only once to the file.
-            if (!File.Exists(path)) 
-            {// Create a file to write to.
+
             string createText = sOutput; 
-            File.WriteAllText(path, createText, Encoding.UTF8); 
-            }
+            File.WriteAllText(path, createText, Encoding.UTF8);
+            MessageBox.Show("file " + path + " successfully created");
         }
     }
 }
