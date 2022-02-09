@@ -33,5 +33,13 @@ namespace ApolloGoldStars
             loggerCreator.ShowDialog();
             this.Show();
         }
+
+        private void PerformanceAnalyzer_Click(object sender, EventArgs e)
+        {
+            PeformanceAnalyzer performanceAnalyzer = new PeformanceAnalyzer(this.Text);
+            this.Hide();
+            performanceAnalyzer.ShowDialog();
+            this.Show();
+        }
     }
 }
