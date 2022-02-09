@@ -58,8 +58,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Plum;
-            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.rbbn_logo;
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.MicrosoftTeams_image__1_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(896, 487);
             this.Controls.Add(this.PerformanceAnalyzer);

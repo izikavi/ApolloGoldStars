@@ -55,7 +55,7 @@
             // 
             this.ShowErrors.AutoSize = true;
             this.ShowErrors.BackColor = System.Drawing.Color.Transparent;
-            this.ShowErrors.Location = new System.Drawing.Point(48, 31);
+            this.ShowErrors.Location = new System.Drawing.Point(41, 158);
             this.ShowErrors.Name = "ShowErrors";
             this.ShowErrors.Size = new System.Drawing.Size(165, 29);
             this.ShowErrors.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.ShowAlarm.AutoSize = true;
             this.ShowAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.ShowAlarm.Location = new System.Drawing.Point(48, 56);
+            this.ShowAlarm.Location = new System.Drawing.Point(41, 183);
             this.ShowAlarm.Name = "ShowAlarm";
             this.ShowAlarm.Size = new System.Drawing.Size(134, 29);
             this.ShowAlarm.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             this.ShowAlarmonport.AutoSize = true;
             this.ShowAlarmonport.BackColor = System.Drawing.Color.Transparent;
-            this.ShowAlarmonport.Location = new System.Drawing.Point(48, 81);
+            this.ShowAlarmonport.Location = new System.Drawing.Point(41, 208);
             this.ShowAlarmonport.Name = "ShowAlarmonport";
             this.ShowAlarmonport.Size = new System.Drawing.Size(199, 29);
             this.ShowAlarmonport.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.ShowConfiguration.AutoSize = true;
             this.ShowConfiguration.BackColor = System.Drawing.Color.Transparent;
-            this.ShowConfiguration.Location = new System.Drawing.Point(48, 106);
+            this.ShowConfiguration.Location = new System.Drawing.Point(41, 233);
             this.ShowConfiguration.Name = "ShowConfiguration";
             this.ShowConfiguration.Size = new System.Drawing.Size(201, 29);
             this.ShowConfiguration.TabIndex = 3;
@@ -99,7 +99,7 @@
             // 
             this.clearHisAll.AutoSize = true;
             this.clearHisAll.BackColor = System.Drawing.Color.Transparent;
-            this.clearHisAll.Location = new System.Drawing.Point(217, 56);
+            this.clearHisAll.Location = new System.Drawing.Point(210, 183);
             this.clearHisAll.Name = "clearHisAll";
             this.clearHisAll.Size = new System.Drawing.Size(204, 29);
             this.clearHisAll.TabIndex = 4;
@@ -108,7 +108,7 @@
             // 
             // portCheckBox
             // 
-            this.portCheckBox.Location = new System.Drawing.Point(253, 81);
+            this.portCheckBox.Location = new System.Drawing.Point(246, 208);
             this.portCheckBox.Name = "portCheckBox";
             this.portCheckBox.Size = new System.Drawing.Size(100, 31);
             this.portCheckBox.TabIndex = 5;
@@ -117,7 +117,7 @@
             // 
             this.ShowPerfomanceMonitorting.AutoSize = true;
             this.ShowPerfomanceMonitorting.BackColor = System.Drawing.Color.Transparent;
-            this.ShowPerfomanceMonitorting.Location = new System.Drawing.Point(48, 131);
+            this.ShowPerfomanceMonitorting.Location = new System.Drawing.Point(41, 258);
             this.ShowPerfomanceMonitorting.Name = "ShowPerfomanceMonitorting";
             this.ShowPerfomanceMonitorting.Size = new System.Drawing.Size(280, 29);
             this.ShowPerfomanceMonitorting.TabIndex = 6;
@@ -128,7 +128,7 @@
             // 
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Location = new System.Drawing.Point(48, 156);
+            this.checkBox6.Location = new System.Drawing.Point(41, 283);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(152, 29);
             this.checkBox6.TabIndex = 7;
@@ -139,7 +139,7 @@
             // 
             this.ShowBIT.AutoSize = true;
             this.ShowBIT.BackColor = System.Drawing.Color.Transparent;
-            this.ShowBIT.Location = new System.Drawing.Point(48, 181);
+            this.ShowBIT.Location = new System.Drawing.Point(41, 308);
             this.ShowBIT.Name = "ShowBIT";
             this.ShowBIT.Size = new System.Drawing.Size(116, 29);
             this.ShowBIT.TabIndex = 8;
@@ -150,7 +150,7 @@
             // 
             this.FileNameLabel.AutoSize = true;
             this.FileNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FileNameLabel.Location = new System.Drawing.Point(776, 75);
+            this.FileNameLabel.Location = new System.Drawing.Point(769, 202);
             this.FileNameLabel.Name = "FileNameLabel";
             this.FileNameLabel.Size = new System.Drawing.Size(0, 25);
             this.FileNameLabel.TabIndex = 9;
@@ -159,7 +159,7 @@
             // 
             this.FilePathLabel.AutoSize = true;
             this.FilePathLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FilePathLabel.Location = new System.Drawing.Point(777, 107);
+            this.FilePathLabel.Location = new System.Drawing.Point(770, 234);
             this.FilePathLabel.Name = "FilePathLabel";
             this.FilePathLabel.Size = new System.Drawing.Size(0, 25);
             this.FilePathLabel.TabIndex = 10;
@@ -167,7 +167,7 @@
             // 
             // openFileDialogButton
             // 
-            this.openFileDialogButton.Location = new System.Drawing.Point(738, 147);
+            this.openFileDialogButton.Location = new System.Drawing.Point(731, 274);
             this.openFileDialogButton.Name = "openFileDialogButton";
             this.openFileDialogButton.Size = new System.Drawing.Size(159, 63);
             this.openFileDialogButton.TabIndex = 11;
@@ -179,7 +179,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(686, 77);
+            this.label1.Location = new System.Drawing.Point(679, 204);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 25);
@@ -190,7 +190,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(699, 107);
+            this.label2.Location = new System.Drawing.Point(692, 234);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 13;
@@ -199,26 +199,28 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(427, 379);
+            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox2.Location = new System.Drawing.Point(377, 439);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(159, 29);
             this.checkBox2.TabIndex = 15;
             this.checkBox2.Text = "Show to screen";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
             // 
             // saveToFilecheckBox
             // 
             this.saveToFilecheckBox.AutoSize = true;
-            this.saveToFilecheckBox.Location = new System.Drawing.Point(296, 379);
+            this.saveToFilecheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.saveToFilecheckBox.Location = new System.Drawing.Point(246, 439);
             this.saveToFilecheckBox.Name = "saveToFilecheckBox";
             this.saveToFilecheckBox.Size = new System.Drawing.Size(125, 29);
             this.saveToFilecheckBox.TabIndex = 16;
             this.saveToFilecheckBox.Text = "Save to file";
-            this.saveToFilecheckBox.UseVisualStyleBackColor = true;
+            this.saveToFilecheckBox.UseVisualStyleBackColor = false;
             // 
             // GenerateButton
             // 
-            this.GenerateButton.Location = new System.Drawing.Point(618, 375);
+            this.GenerateButton.Location = new System.Drawing.Point(568, 435);
             this.GenerateButton.Name = "GenerateButton";
             this.GenerateButton.Size = new System.Drawing.Size(130, 46);
             this.GenerateButton.TabIndex = 17;
@@ -230,7 +232,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox4.Location = new System.Drawing.Point(48, 206);
+            this.checkBox4.Location = new System.Drawing.Point(41, 333);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(230, 29);
             this.checkBox4.TabIndex = 18;
@@ -239,7 +241,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 206);
+            this.textBox1.Location = new System.Drawing.Point(276, 333);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(226, 61);
@@ -249,7 +251,7 @@
             // 
             this.portClearhis.AutoSize = true;
             this.portClearhis.BackColor = System.Drawing.Color.Transparent;
-            this.portClearhis.Location = new System.Drawing.Point(359, 83);
+            this.portClearhis.Location = new System.Drawing.Point(352, 210);
             this.portClearhis.Name = "portClearhis";
             this.portClearhis.Size = new System.Drawing.Size(204, 29);
             this.portClearhis.TabIndex = 20;
@@ -262,9 +264,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Plum;
-            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.rbbn_logo;
+            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1016, 458);
+            this.ClientSize = new System.Drawing.Size(944, 504);
             this.Controls.Add(this.portClearhis);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.checkBox4);
