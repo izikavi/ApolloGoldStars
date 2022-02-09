@@ -31,13 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogForm));
             this.LoggerCreator = new System.Windows.Forms.Button();
             this.PerformanceAnalyzer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LoggerCreator
             // 
-            this.LoggerCreator.Location = new System.Drawing.Point(34, 154);
+            this.LoggerCreator.Location = new System.Drawing.Point(60, 28);
             this.LoggerCreator.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoggerCreator.Name = "LoggerCreator";
             this.LoggerCreator.Size = new System.Drawing.Size(196, 65);
@@ -48,7 +46,7 @@
             // 
             // PerformanceAnalyzer
             // 
-            this.PerformanceAnalyzer.Location = new System.Drawing.Point(264, 154);
+            this.PerformanceAnalyzer.Location = new System.Drawing.Point(329, 28);
             this.PerformanceAnalyzer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PerformanceAnalyzer.Name = "PerformanceAnalyzer";
             this.PerformanceAnalyzer.Size = new System.Drawing.Size(200, 65);
@@ -56,36 +54,14 @@
             this.PerformanceAnalyzer.Text = "Performance Analyzer";
             this.PerformanceAnalyzer.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(34, 248);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 65);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Script runner";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(268, 247);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 65);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Apollo slideshow";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // LogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
-            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(516, 346);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.MicrosoftTeams_image__1_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(896, 487);
             this.Controls.Add(this.PerformanceAnalyzer);
             this.Controls.Add(this.LoggerCreator);
             this.DoubleBuffered = true;
@@ -101,7 +77,5 @@
 
         private Button LoggerCreator;
         private Button PerformanceAnalyzer;
-        private Button button1;
-        private Button button2;
     }
 }
