@@ -62,7 +62,10 @@ namespace ApolloGoldStars
                               "num of ticks less than 10ms = "+lowOfRange.Sum()+" \n"+
                               "num of ticks longer than 10ms = " + highOfRange.Sum() + " \n" ;
             }));
+        }
 
+        private void HighObjButton_Click(object sender, EventArgs e)
+        {
 
         }
     }

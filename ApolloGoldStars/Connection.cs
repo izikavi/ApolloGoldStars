@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Net.Sockets;
 using System.Net;
-
+using System.Data;
 
 namespace ApolloGoldStars
 {
@@ -230,7 +230,7 @@ namespace ApolloGoldStars
             if (GoToDbg())
             {
                 telnet.WriteLine("ClearTimeCollection");
-                System.Threading.Thread.Sleep(100); // sec
+                System.Threading.Thread.Sleep(100);
                 telnet.WriteLine("SetTickTimeCollection 1");
                 telnet.Read();
                 for (int i = 0; i < sec; i++)
@@ -247,6 +247,31 @@ namespace ApolloGoldStars
             }
 
             return sOutput;
+        }
+
+        public DataTable HighObjConsumption(int thresholdTime)
+        {
+            DataTable dt = new DataTable();
+
+            if (GoToDbg())
+            {
+                telnet.WriteLine("SetObjectTimeCollection 1");
+                System.Threading.Thread.Sleep(100);
+                telnet.WriteLine("SetMinConsumptionTime " + thresholdTime);
+                System.Threading.Thread.Sleep(100);
+                telnet.WriteLine("InitTimeConsumption");
+                System.Threading.Thread.Sleep(100);
+                telnet.WriteLine("SetTimeConsumptionFlag 1");
+                System.Threading.Thread.Sleep(2000);
+                telnet.WriteLine("PrintTimeConsumption 0");
+
+                string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                OutFromDbg();
+            }
+
+            return dt;
         }
     }
 }
