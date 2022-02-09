@@ -5,44 +5,45 @@ using System.Net;
 
 namespace ApolloGoldStars
 {
-    public class Connection
+    public class Connection : IDisposable
     {
-        private Socket _socket;
         private TelnetConnection telnet;
+        private bool disposedValue;
 
         public Connection(string host, int port, int slot, bool is9901, string username, string passw)
         {
             telnet = new TelnetConnection(host, port);
             telnet.Login(username, passw, 100);
         }
-    }
-        /*
-        public enum Protocol
+
+        ~Connection()
         {
-            Telnet,
-            SSH,
-            NUM_OF_PROTOCOLS
+            Dispose(false);
         }
-        public class Connection
+
+        protected virtual void Dispose(bool disposing)
         {
-            private TcpClient m_tcpSocket;
-            private int m_timeoutMs = 100;
-            private int m_slot;
-            private bool m_is9901 = false;
-            private Protocol m_protocol = Protocol.Telnet;
-
-            public string? m_username { get; set;}
-            public string? m_password { get; set;}
-
-            public Connection(string host, int port, int slot, bool is9901, Protocol protocol)
+            if (disposing)
             {
-                m_tcpSocket = new TcpClient(host, port);
-                m_protocol = protocol;
-                m_slot = slot;
-                m_is9901 = is9901;
+                if (telnet != null)
+                {
+                    ((IDisposable)telnet).Dispose();
+                    telnet = null;
+                }
             }
-
         }
-        */
 
+        // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+        // ~Connection()
+        // {
+        //     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        //     Dispose(disposing: false);
+        // }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
     }
+}
