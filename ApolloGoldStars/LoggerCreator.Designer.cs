@@ -39,7 +39,7 @@
             this.openFileDialogButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.ShowToScreenCheckBox = new System.Windows.Forms.CheckBox();
             this.saveToFilecheckBox = new System.Windows.Forms.CheckBox();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.UserCommandsCheckBox = new System.Windows.Forms.CheckBox();
@@ -156,17 +156,17 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "File Path";
             // 
-            // checkBox2
+            // ShowToScreenCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Location = new System.Drawing.Point(264, 263);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(106, 19);
-            this.checkBox2.TabIndex = 15;
-            this.checkBox2.Text = "Show to screen";
-            this.checkBox2.UseVisualStyleBackColor = false;
+            this.ShowToScreenCheckBox.AutoSize = true;
+            this.ShowToScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowToScreenCheckBox.Location = new System.Drawing.Point(264, 263);
+            this.ShowToScreenCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowToScreenCheckBox.Name = "ShowToScreenCheckBox";
+            this.ShowToScreenCheckBox.Size = new System.Drawing.Size(106, 19);
+            this.ShowToScreenCheckBox.TabIndex = 15;
+            this.ShowToScreenCheckBox.Text = "Show to screen";
+            this.ShowToScreenCheckBox.UseVisualStyleBackColor = false;
             // 
             // saveToFilecheckBox
             // 
@@ -238,7 +238,7 @@
             this.Controls.Add(this.UserCommandsCheckBox);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.saveToFilecheckBox);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.ShowToScreenCheckBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.openFileDialogButton);
@@ -272,7 +272,7 @@
         private Button openFileDialogButton;
         private Label label1;
         private Label label2;
-        private CheckBox checkBox2;
+        private CheckBox ShowToScreenCheckBox;
         private CheckBox saveToFilecheckBox;
         private Button GenerateButton;
         private CheckBox UserCommandsCheckBox;

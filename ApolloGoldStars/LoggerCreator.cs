@@ -12,10 +12,12 @@ namespace ApolloGoldStars
 {
     public partial class LoggerCreator : Form
     {
+        string m_sCardName = "";
         public LoggerCreator(string sCardName)
         {
             InitializeComponent();
             this.Text = sCardName + " Logger Creator";
+            m_sCardName = sCardName;
             FileNameLabel.Hide();
             FilePathLabel.Hide();
             saveToFilecheckBox.Enabled = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
@@ -71,6 +73,13 @@ namespace ApolloGoldStars
             if (saveToFilecheckBox.Checked)
             {
                 SaveToFile(sOutput);
+            }
+            if(ShowToScreenCheckBox.Checked)
+            {
+                LoggerCreatorOutput loggerCreatorOutput = new LoggerCreatorOutput(sOutput, m_sCardName);
+                this.Hide();
+                loggerCreatorOutput.ShowDialog();
+                this.Show();
             }
         }
 
