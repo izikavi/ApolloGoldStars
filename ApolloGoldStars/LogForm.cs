@@ -12,18 +12,11 @@ namespace ApolloGoldStars
 {
     public partial class LogForm : Form
     {
-        private TelnetConnection m_con;
-
-        public LogForm(string sCardName)//(TelnetConnection con)
+        public LogForm(string sCardName)
         {
             InitializeComponent();
             this.Text = sCardName;
             //m_con = con;
-        }
-
-        private void LogForm_Load(object sender, EventArgs e)
-        {
-            //m_con.Login(); // TODO: write the login and build the form
         }
 
         private void LoggerCreator_Click(object sender, EventArgs e)

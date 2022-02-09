@@ -7,7 +7,7 @@ namespace ApolloGoldStars
 {
     public class Connection : IDisposable
     {
-        private TelnetConnection telnet;
+        private TelnetConnection? telnet;
         private bool disposedValue;
         public static string sCardName = "";
 
@@ -221,6 +221,29 @@ namespace ApolloGoldStars
         {
             Dispose(true);
             GC.SuppressFinalize(this);
+        }
+
+        public string PeriodicAct(int sec)
+        {
+            string sOutput = "";
+
+            if (GoToDbg())
+            {
+                telnet.WriteLine("SetTickTimeCollection 1");
+                for (int i = 0; i < sec; i++)
+                {
+                    System.Threading.Thread.Sleep(1000); // sec
+                    telnet.WriteLine("PeractStat");
+                    string s = telnet.Read();
+                    s = s.Replace("\0", "");
+                    s = s.Substring(s.IndexOf("\n"));
+                    sOutput += s;
+                }
+                telnet.WriteLine("SetTickTimeCollection 0");
+                OutFromDbg();
+            }
+
+            return sOutput;
         }
     }
 }

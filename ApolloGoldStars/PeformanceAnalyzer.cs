@@ -19,8 +19,23 @@ namespace ApolloGoldStars
             this.Text = sCardName + " Peformance Analyzer";
         }
 
-            private void PeformanceAnalyzer_Load(object sender, EventArgs e)
+        private void PeformanceAnalyzer_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void PeriodicRunButton_Click(object sender, EventArgs e)
+        {
+            string data = MainForm.connection.PeriodicAct(Convert.ToInt32(PeriodicSec.Value.ToString()));
+            List<int> minTick = new List<int>();
+            List<int> minTime = new List<int>();
+            List<int> maxTick = new List<int>();
+            List<int> maxTime = new List<int>();
+
+            for (int i = 0; i < PeriodicSec.Value; i++)
+            {
+
+            }
 
         }
     }

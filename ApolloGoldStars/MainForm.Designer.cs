@@ -48,7 +48,7 @@
             // 
             this.RcpIpTextBox.AllowDrop = true;
             this.RcpIpTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RcpIpTextBox.Location = new System.Drawing.Point(179, 210);
+            this.RcpIpTextBox.Location = new System.Drawing.Point(151, 241);
             this.RcpIpTextBox.MaxLength = 15;
             this.RcpIpTextBox.Name = "RcpIpTextBox";
             this.RcpIpTextBox.PlaceholderText = "IP";
@@ -63,7 +63,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(49, 213);
+            this.label1.Location = new System.Drawing.Point(21, 244);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 48);
             this.label1.TabIndex = 1;
@@ -74,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(51, 350);
+            this.label2.Location = new System.Drawing.Point(23, 381);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 48);
             this.label2.TabIndex = 3;
@@ -83,7 +83,7 @@
             // SlotNo
             // 
             this.SlotNo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SlotNo.Location = new System.Drawing.Point(179, 347);
+            this.SlotNo.Location = new System.Drawing.Point(151, 378);
             this.SlotNo.Maximum = new decimal(new int[] {
             20,
             0,
@@ -96,7 +96,7 @@
             // ConnectButton
             // 
             this.ConnectButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ConnectButton.Location = new System.Drawing.Point(342, 456);
+            this.ConnectButton.Location = new System.Drawing.Point(203, 518);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(330, 81);
             this.ConnectButton.TabIndex = 6;
@@ -110,7 +110,7 @@
             this.Io9901Box.BackColor = System.Drawing.Color.Transparent;
             this.Io9901Box.Checked = true;
             this.Io9901Box.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Io9901Box.Location = new System.Drawing.Point(461, 213);
+            this.Io9901Box.Location = new System.Drawing.Point(405, 262);
             this.Io9901Box.Name = "Io9901Box";
             this.Io9901Box.Size = new System.Drawing.Size(78, 29);
             this.Io9901Box.TabIndex = 7;
@@ -120,7 +120,7 @@
             // UsernameBox
             // 
             this.UsernameBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UsernameBox.Location = new System.Drawing.Point(648, 273);
+            this.UsernameBox.Location = new System.Drawing.Point(531, 302);
             this.UsernameBox.MaxLength = 256;
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.PlaceholderText = "username";
@@ -133,7 +133,7 @@
             // 
             this.PasswordBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordBox.Location = new System.Drawing.Point(648, 350);
+            this.PasswordBox.Location = new System.Drawing.Point(531, 379);
             this.PasswordBox.MaxLength = 256;
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PlaceholderText = "Password";
@@ -146,7 +146,7 @@
             // PortNum
             // 
             this.PortNum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PortNum.Location = new System.Drawing.Point(177, 275);
+            this.PortNum.Location = new System.Drawing.Point(149, 306);
             this.PortNum.Maximum = new decimal(new int[] {
             2130,
             0,
@@ -172,7 +172,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(49, 278);
+            this.label3.Location = new System.Drawing.Point(21, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 48);
             this.label3.TabIndex = 11;
@@ -184,7 +184,7 @@
             this.ProtocolBox.Items.AddRange(new object[] {
             "Telnet",
             "SSH"});
-            this.ProtocolBox.Location = new System.Drawing.Point(648, 213);
+            this.ProtocolBox.Location = new System.Drawing.Point(531, 242);
             this.ProtocolBox.Name = "ProtocolBox";
             this.ProtocolBox.Size = new System.Drawing.Size(248, 33);
             this.ProtocolBox.TabIndex = 13;
@@ -198,7 +198,7 @@
             this.BackColor = System.Drawing.Color.Plum;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(981, 618);
+            this.ClientSize = new System.Drawing.Size(813, 644);
             this.Controls.Add(this.ProtocolBox);
             this.Controls.Add(this.PortNum);
             this.Controls.Add(this.label3);

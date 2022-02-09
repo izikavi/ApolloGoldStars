@@ -34,13 +34,14 @@ namespace ApolloGoldStars
         public TelnetConnection(string Hostname, int Port)
         {
             tcpSocket = new TcpClient(Hostname, Port);
-
+            System.Threading.Thread.Sleep(1000);
         }
 
         public string Login(string Username,string Password,int LoginTimeOutMs)
         {
             int oldTimeOutMs = TimeOutMs;
             TimeOutMs = LoginTimeOutMs;
+            //WriteLine("");
             string s = Read();
             if (!s.TrimEnd().EndsWith(":"))
                throw new Exception("Failed to connect : no login prompt");

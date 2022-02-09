@@ -22,6 +22,8 @@ namespace ApolloGoldStars
             FilePathLabel.Hide();
             saveToFilecheckBox.Enabled = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
             saveToFilecheckBox.Checked = !string.IsNullOrWhiteSpace(FileNameLabel.Text);
+            clearHisAll.Enabled = ShowAlarm.Checked;
+            portClearhis.Enabled = ShowAlarmonport.Checked;
             //string sLogShow  = MainForm.connection.LogShow();
             //sLogShow = sLogShow.Replace("\0","");
             //label1.Text = sLogShow.Substring(sLogShow.IndexOf("\n"));
@@ -100,6 +102,16 @@ namespace ApolloGoldStars
             string createText = sOutput; 
             File.WriteAllText(path, createText, Encoding.UTF8);
             MessageBox.Show("file " + path + " successfully created");
+        }
+
+        private void ShowAlarm_CheckedChanged(object sender, EventArgs e)
+        {
+            clearHisAll.Enabled = ShowAlarm.Checked;
+        }
+
+        private void ShowAlarmonport_CheckedChanged(object sender, EventArgs e)
+        {
+            portClearhis.Enabled = ShowAlarmonport.Checked;
         }
     }
 }
