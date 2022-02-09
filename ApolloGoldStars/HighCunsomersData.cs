@@ -12,9 +12,11 @@ namespace ApolloGoldStars
 {
     public partial class HighCunsomersData : Form
     {
-        public HighCunsomersData()
+        public HighCunsomersData(string sCardName,int threshold)
         {
             InitializeComponent();
+            this.Text = sCardName + " High Cunsomers Data";
+            MainForm.connection.HighObjConsumption(threshold);
         }
     }
 }

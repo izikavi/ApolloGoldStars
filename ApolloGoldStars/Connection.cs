@@ -269,6 +269,28 @@ namespace ApolloGoldStars
                 s = s.Replace("\0", "");
                 s = s.Substring(s.IndexOf("\n"));
                 OutFromDbg();
+                string[] sSplit = s.Split("Time Consumption for");
+                Dictionary<string,List<int>> dictionary = new Dictionary<string,List<int>>();
+                for(int i = 1;i<sSplit.Length;++i)
+                {
+                    string sFisrSub = sSplit[i].Substring(sSplit[i].IndexOf("time = ") + 7);
+
+                    int time = Convert.ToInt32(sFisrSub.Substring(0, sFisrSub.IndexOf("\r\n")));
+
+                    string key = sSplit[i].Substring(0, sSplit[i].IndexOf("TickActivationNum")).Trim().Replace("\r\n", " ");
+
+                    if (!dictionary.ContainsKey(key))
+                    {
+
+                        List<int> list = new List<int>();
+                        dictionary.Add(key,list);
+                    }
+                    dictionary[key].Add(time);
+                }
+
+                foreach()
+
+                int x = 0;
             }
 
             return dt;

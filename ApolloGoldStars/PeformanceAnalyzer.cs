@@ -66,7 +66,10 @@ namespace ApolloGoldStars
 
         private void HighObjButton_Click(object sender, EventArgs e)
         {
-
+            HighCunsomersData highCunsomersData = new HighCunsomersData(Connection.sCardName, Convert.ToInt32(ThresholdNum.Value.ToString()));
+            this.Hide();
+            highCunsomersData.ShowDialog();
+            this.Show();
         }
     }
 }
