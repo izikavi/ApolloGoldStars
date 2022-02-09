@@ -23,14 +23,12 @@ namespace ApolloGoldStars
             int port = Convert.ToInt32(PortNum.Value.ToString());
             int slot = Convert.ToInt32(SlotNo.Value.ToString());
             bool is9901 = Io9901Box.Checked;
-            Protocol protocol = ProtocolBox.SelectedItem.ToString().Equals("Telnet", StringComparison.Ordinal) ? Protocol.Telnet : Protocol.SSH;
+            //Protocol protocol = ProtocolBox.SelectedItem.ToString().Equals("Telnet", StringComparison.Ordinal) ? Protocol.Telnet : Protocol.SSH;
 
             try
             {
-                Connection con = new Connection(host, port, slot, is9901, protocol);
-                con.m_username = UsernameBox.Text;
-                con.m_password = PasswordBox.Text;
-                con.Login(UsernameBox.Text, PasswordBox.Text, 100);
+                Connection con = new Connection(host, port, slot, is9901, UsernameBox.Text, PasswordBox.Text);
+                //con.Login(UsernameBox.Text, PasswordBox.Text, 100);
                 //LogForm logForm = new LogForm(con);
                 LogForm logForm = new LogForm();
                 this.Hide();

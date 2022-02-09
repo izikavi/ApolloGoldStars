@@ -13,7 +13,7 @@ namespace ApolloGoldStars
         public Connection(string host, int port, int slot, bool is9901, string username, string passw)
         {
             telnet = new TelnetConnection(host, port);
-
+            telnet.Login(username, passw, 100);
         }
     }
         /*
