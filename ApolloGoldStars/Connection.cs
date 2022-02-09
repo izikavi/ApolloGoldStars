@@ -270,7 +270,7 @@ namespace ApolloGoldStars
                 s = s.Substring(s.IndexOf("\n"));
                 OutFromDbg();
                 string[] sSplit = s.Split("Time Consumption for");
-                Dictionary<string,List<int>> dictionary = new Dictionary<string,List<int>>();
+                Dictionary<string,objData> dictionary = new Dictionary<string, objData>();
                 for(int i = 1;i<sSplit.Length;++i)
                 {
                     string sFisrSub = sSplit[i].Substring(sSplit[i].IndexOf("time = ") + 7);
@@ -278,17 +278,15 @@ namespace ApolloGoldStars
                     int time = Convert.ToInt32(sFisrSub.Substring(0, sFisrSub.IndexOf("\r\n")));
 
                     string key = sSplit[i].Substring(0, sSplit[i].IndexOf("TickActivationNum")).Trim().Replace("\r\n", " ");
-
-                    if (!dictionary.ContainsKey(key))
+                    objData obj = new objData(key);
+                    if (!dictionary.ContainsKey(obj.GetKey()))
                     {
-
-                        List<int> list = new List<int>();
-                        dictionary.Add(key,list);
+                        dictionary.Add(obj.GetKey(),obj);
                     }
-                    dictionary[key].Add(time);
+                    dictionary[obj.GetKey()].m_Values.Add(time);
                 }
 
-                foreach()
+                //foreach(string key)
 
                 int x = 0;
             }
