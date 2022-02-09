@@ -4,8 +4,10 @@ using System.Net;
 
 namespace ApolloGoldStars
 {
+
     public partial class MainForm : Form
     {
+        public static Connection? connection;
         public MainForm()
         {
             InitializeComponent();
@@ -27,10 +29,10 @@ namespace ApolloGoldStars
 
             try
             {
-                Connection con = new Connection(host, port, slot, is9901, UsernameBox.Text, PasswordBox.Text);
+                MainForm.connection = new Connection(host, port, slot, is9901, UsernameBox.Text, PasswordBox.Text);
                 //con.Login(UsernameBox.Text, PasswordBox.Text, 100);
                 //LogForm logForm = new LogForm(con);
-                LogForm logForm = new LogForm();
+                LogForm logForm = new LogForm(Connection.sCardName + " - Slot " + slot);
                 this.Hide();
                 logForm.ShowDialog();
                 this.Show();

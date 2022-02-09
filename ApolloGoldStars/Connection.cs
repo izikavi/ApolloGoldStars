@@ -9,16 +9,75 @@ namespace ApolloGoldStars
     {
         private TelnetConnection telnet;
         private bool disposedValue;
+        public static string sCardName = "";
 
         public Connection(string host, int port, int slot, bool is9901, string username, string passw)
         {
             telnet = new TelnetConnection(host, port);
             telnet.Login(username, passw, 100);
+            if(GoToDbg())
+            {
+                telnet.WriteLine("");
+                string s = telnet.Read();
+                System.Text.RegularExpressions.Regex CapitalLetter = new System.Text.RegularExpressions.Regex(@"\p{Lu}");
+                System.Text.RegularExpressions.Match match = CapitalLetter.Match(s);
+                if (match.Success)
+                {
+                    Connection.sCardName = s.Substring(match.Index);
+                    Connection.sCardName = sCardName.Substring(0, sCardName.IndexOf(" "));
+                }
+            }
+            OutFromDbg();
+        }
+
+        public void OutFromDbg()
+        {
+            telnet.WriteLine("exit");
+        }
+
+        public bool GoToDbg()
+        {
+            telnet.WriteLine("dbg");
+            string s = telnet.Read();
+            if (s.IndexOf(">") == -1)
+            {
+                System.Threading.Thread.Sleep(1000);
+                telnet.WriteLine("dbg");
+                s = telnet.Read();
+                if (s.IndexOf(">") != -1)
+                {                
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("dbg Connection failed");
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
         }
 
         ~Connection()
         {
             Dispose(false);
+        }
+
+        public void LogShow()
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("logshow");
+                string s = telnet.Read();
+
+                string path = @"c:\temp\MyTest.txt"; // This text is added only once to the file.
+                if (!File.Exists(path)) { // Create a file to write to.
+                string createText = s; 
+                File.WriteAllText(path, createText, Encoding.UTF8); }
+                OutFromDbg();
+            }
         }
 
         protected virtual void Dispose(bool disposing)
