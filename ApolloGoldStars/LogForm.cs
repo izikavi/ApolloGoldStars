@@ -46,11 +46,16 @@ namespace ApolloGoldStars
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string loc = @"C: \Users\iavinoam\Downloads\Techthon22 - Apollo Gold star.pptx";
-            ProcessStartInfo psi = new ProcessStartInfo();
-            psi.FileName = "POWERPNT.exe";
-            psi.Arguments = loc;
-            Process.Start(psi);
+            Application oPPT;
+            Presentations objPresSet;
+            Presentation objPres;
+            SlideShowView oSlideShowView;
+            oPPT = new Application();
+            // Show PowerPoint to the user.
+            oPPT.Visible = MsoTriState.msoTrue;
+            objPresSet = oPPT.Presentations;
+            objPres = objPresSet.Open("C:\Users\iavinoam\Downloads\Techthon22- Apollo Gold star.pptx", MsoTriState.msoFalse,
+                    MsoTriState.msoTrue, MsoTriState.msoTrue);
         }
     }
 }

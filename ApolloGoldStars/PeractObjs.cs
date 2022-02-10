@@ -54,17 +54,10 @@ namespace ApolloGoldStars
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                try
+                if (row.Cells[6].Value == "Add")
                 {
                     string strData = row.Cells[1].Value.ToString() + " " + MainForm.connection.ConvertToCorrectFormat(row.Cells[2].Value.ToString());
-                    if (row.Cells[6].Value == "Add")
-                    {
-                        MainForm.connection.AddtoPerAct(strData);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show(ex.Message, "error");
+                    MainForm.connection.AddtoPerAct(strData);
                 }
             }
         }
