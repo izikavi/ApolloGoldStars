@@ -95,7 +95,8 @@
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ConnectButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
+            this.ConnectButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.ConnectButton.Location = new System.Drawing.Point(203, 518);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(330, 81);
@@ -110,7 +111,7 @@
             this.Io9901Box.BackColor = System.Drawing.Color.Transparent;
             this.Io9901Box.Checked = true;
             this.Io9901Box.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Io9901Box.Location = new System.Drawing.Point(405, 262);
+            this.Io9901Box.Location = new System.Drawing.Point(405, 256);
             this.Io9901Box.Name = "Io9901Box";
             this.Io9901Box.Size = new System.Drawing.Size(78, 29);
             this.Io9901Box.TabIndex = 7;

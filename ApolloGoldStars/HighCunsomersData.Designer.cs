@@ -136,6 +136,8 @@
             // 
             this.backgroundWorker1.WorkerReportsProgress = true;
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             // 
             // HighCunsomersData
             // 
@@ -152,11 +154,16 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HighCunsomersData";
             this.Text = "HighCunsomersData";
-            this.Load += new System.EventHandler(this.HighCunsomersData_Load);
+            this.Shown += new System.EventHandler(this.HighCunsomersData_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void @new(object sender, System.ComponentModel.ProgressChangedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

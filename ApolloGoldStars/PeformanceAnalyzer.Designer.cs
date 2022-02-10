@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeformanceAnalyzer));
             this.label1 = new System.Windows.Forms.Label();
             this.PeriodicSec = new System.Windows.Forms.NumericUpDown();
@@ -39,7 +38,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ThresholdNum = new System.Windows.Forms.NumericUpDown();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PeriodicSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdNum)).BeginInit();
             this.SuspendLayout();
@@ -199,6 +197,5 @@
         private Label label4;
         private Label label5;
         private NumericUpDown ThresholdNum;
-        private ToolTip toolTip1;
     }
 }

@@ -99,5 +99,15 @@ namespace ApolloGoldStars.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2022_02_10_124704 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2022-02-10 124704", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

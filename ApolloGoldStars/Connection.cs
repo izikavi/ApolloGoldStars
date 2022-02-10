@@ -249,12 +249,12 @@ namespace ApolloGoldStars
             return sOutput;
         }
 
-        public void HighObjConsumption(int thresholdTime, DataGridView dataGridView1)
+        public void HighObjConsumption(int thresholdTime, DataGridView dataGridView1, System.ComponentModel.BackgroundWorker background)
         {
 
             if (GoToDbg())
             {
-                background.ReportProgress(7);
+                background.ReportProgress(1);
                 telnet.WriteLine("SetObjectTimeCollection 1");
                 System.Threading.Thread.Sleep(100);
                 telnet.WriteLine("SetMinConsumptionTime " + thresholdTime);
@@ -265,7 +265,7 @@ namespace ApolloGoldStars
                 System.Threading.Thread.Sleep(2000);
                 telnet.WriteLine("PrintTimeConsumption 0");
 
-                background.ReportProgress(20);
+                //background.ReportProgress(20);
 
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
@@ -290,7 +290,7 @@ namespace ApolloGoldStars
                         dictionary.Add(obj.GetKey(),obj);
                     }
                     dictionary[obj.GetKey()].m_Values.Add(time);
-                    background.ReportProgress(20 + i);
+                    background.ReportProgress((i * 100)/ sSplit.Length);
                 }
 
                 Dictionary<int,string> classIdToClassNameDic = new Dictionary<int,string>();
