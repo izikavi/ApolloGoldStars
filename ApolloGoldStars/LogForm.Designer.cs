@@ -72,6 +72,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "Application Support";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Scriptbutton
             // 
@@ -84,6 +85,7 @@
             this.Scriptbutton.TabIndex = 2;
             this.Scriptbutton.Text = "Run User\r\nScript";
             this.Scriptbutton.UseVisualStyleBackColor = false;
+            this.Scriptbutton.Click += new System.EventHandler(this.Scriptbutton_Click);
             // 
             // LogForm
             // 

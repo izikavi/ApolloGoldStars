@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,23 @@ namespace ApolloGoldStars
             this.Hide();
             performanceAnalyzer.ShowDialog();
             this.Show();
+        }
+
+        private void Scriptbutton_Click(object sender, EventArgs e)
+        {
+            UserScript userScript = new UserScript();
+            this.Hide();
+            userScript.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string loc = @"C: \Users\iavinoam\Downloads\Techthon22 - Apollo Gold star.pptx";
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = "POWERPNT.exe";
+            psi.Arguments = loc;
+            Process.Start(psi);
         }
     }
 }
