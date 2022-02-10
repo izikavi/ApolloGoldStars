@@ -16,7 +16,16 @@ namespace ApolloGoldStars
         {
             InitializeComponent();
             this.Text = sCardName + " High Cunsomers Data";
-            MainForm.connection.HighObjConsumption(threshold);
+            DataTable dt = MainForm.connection.HighObjConsumption(threshold);
+
+            //foreach (DataRow dr in dt.Rows)
+            //{
+               // this.dataGridView1.Rows.Add(new string[] { dr.ItemArray.GetValue()});
+            //}
+           // BindingSource bs = new BindingSource();
+            //bs.DataSource = dt;
+            //this.dataGridView1.DataSource = bs;
+             //this.dataGridView1.DataSource = dt;
         }
 
         private void HighCunsomersData_Load(object sender, EventArgs e)
