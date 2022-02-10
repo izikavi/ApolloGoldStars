@@ -37,95 +37,6 @@ namespace ApolloGoldStars
             OutFromDbg();
         }
 
-        internal void PeractObjs(DataGridView dataGridView1)
-        {
-            if(GoToDbg())
-            {
-                telnet.WriteLine("PerActDisp 1");
-                System.Threading.Thread.Sleep(1000);
-
-                string s = telnet.Read();
-                s = s.Replace("\0", "");
-                s = s.Substring(s.IndexOf("\n"));
-                s = s.Replace(" ", "");
-
-                string[] sForegroundSplit = s.Split(new Char[] { ',','\r','\n' }, StringSplitOptions.RemoveEmptyEntries);
-                Dictionary<string, objData> dictionary = new Dictionary<string, objData>();
-
-                for (int i = 1;i<(sForegroundSplit.Length-1);i+=2)
-                {
-                    objData obj = new objData(sForegroundSplit[i+1],false);
-
-                    if (!dictionary.ContainsKey(obj.GetKey()))
-                    {
-                        obj.m_ClassName = sForegroundSplit[i];
-                        obj.m_IsRegToForeground = true;
-                        dictionary.Add(obj.GetKey(), obj);
-                    }
-                }
-
-                telnet.WriteLine("PerActDisp 50");
-                System.Threading.Thread.Sleep(1000);
-
-                s = telnet.Read();
-                s = s.Replace("\0", "");
-                s = s.Substring(s.IndexOf("\n"));
-                s = s.Replace(" ", "");
-
-                string[] sBackGroundSplit = s.Split(new Char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-
-                for (int i = 1; i < (sBackGroundSplit.Length - 3); i += 4)
-                {
-                    objData obj = new objData(sBackGroundSplit[i + 1], false);
-
-                    if (!dictionary.ContainsKey(obj.GetKey()))
-                    {
-                        obj.m_ClassName = sBackGroundSplit[i];
-                        obj.m_IsRegToBackround = true;
-                        obj.m_TicksArray[0] = Convert.ToInt32(sBackGroundSplit[i + 2].Replace("onTick#", ""));
-                        obj.m_TicksArray[1] = Convert.ToInt32(sBackGroundSplit[i + 3].Replace("onTick#", ""));
-                        dictionary.Add(obj.GetKey(), obj);
-                    }
-                    else
-                    {
-                        dictionary[obj.GetKey()].m_IsRegToBackround = true;
-                        dictionary[obj.GetKey()].m_TicksArray[0] = Convert.ToInt32(sBackGroundSplit[i + 2].Replace("onTick#", ""));
-                        dictionary[obj.GetKey()].m_TicksArray[1] = Convert.ToInt32(sBackGroundSplit[i + 3].Replace("onTick#", ""));
-                    }
-                }
-
-                telnet.WriteLine("PerActDisp 100");
-                System.Threading.Thread.Sleep(1000);
-
-                s = telnet.Read();
-                s = s.Replace("\0", "");
-                s = s.Substring(s.IndexOf("\n"));
-                s = s.Replace(" ", "");
-
-                string[] sOneSecSplit = s.Split(new Char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-
-                for (int i = 1; i < (sOneSecSplit.Length - 2); i += 3)
-                {
-                    objData obj = new objData(sOneSecSplit[i + 1], false);
-
-                    if (!dictionary.ContainsKey(obj.GetKey()))
-                    {
-                        obj.m_ClassName = sOneSecSplit[i];
-                        obj.m_IsRegToOnesec = true;
-                        obj.m_TicksArray[0] = Convert.ToInt32(sOneSecSplit[i + 2].Replace("onTick#", ""));
-                        dictionary.Add(obj.GetKey(), obj);
-                    }
-                    else
-                    {
-                        dictionary[obj.GetKey()].m_IsRegToOnesec = true;
-                        dictionary[obj.GetKey()].m_TicksArray[0] = Convert.ToInt32(sOneSecSplit[i + 2].Replace("onTick#", ""));
-                    }
-                }
-
-                OutFromDbg();
-            }            
-        }
-
         public void OutFromDbg()
         {            
             telnet.WriteLine("exit");
@@ -348,7 +259,7 @@ namespace ApolloGoldStars
 
         public void HighObjConsumption(int thresholdTime, DataGridView dataGridView1, System.ComponentModel.BackgroundWorker background)
         {
-
+            background.ReportProgress(1);
             if (GoToDbg())
             {
                 background.ReportProgress(1);
@@ -362,7 +273,7 @@ namespace ApolloGoldStars
                 System.Threading.Thread.Sleep(2000);
                 telnet.WriteLine("PrintTimeConsumption 0");
 
-                //background.ReportProgress(20);
+                background.ReportProgress(15);
 
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
@@ -387,9 +298,13 @@ namespace ApolloGoldStars
                         dictionary.Add(obj.GetKey(),obj);
                     }
                     dictionary[obj.GetKey()].m_Values.Add(time);
-                    background.ReportProgress((i * 100)/ sSplit.Length);
+                    if (i == (sSplit.Length/2))
+                    {
+                        background.ReportProgress(50);
+                    }
+                    
                 }
-
+                background.ReportProgress(75);
                 Dictionary<int,string> classIdToClassNameDic = new Dictionary<int,string>();
 
                 foreach (string key in dictionary.Keys)
@@ -399,7 +314,7 @@ namespace ApolloGoldStars
                         classIdToClassNameDic[dictionary[key].m_ClassID] = GetClassName(dictionary[key].m_ClassID);
                     }
                 }
-
+                background.ReportProgress(85);
                 //dictionary.Sort
 
                 foreach (string key in dictionary.Keys)
@@ -412,6 +327,7 @@ namespace ApolloGoldStars
                                               String.Format("{0:0.##}", dictionary[key].GetAvgTime()),
                                               dictionary[key].m_Values.Count()/2});
                 }
+                background.ReportProgress(100);
             }
         }
 
@@ -432,6 +348,113 @@ namespace ApolloGoldStars
             else
             {
                 return "";
+            }
+        }
+
+        internal void PeractObjs(DataGridView dataGridView1)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("PerActDisp 1");
+                System.Threading.Thread.Sleep(1000);
+
+                string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                s = s.Replace(" ", "");
+
+                string[] sForegroundSplit = s.Split(new Char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                Dictionary<string, objData> dictionary = new Dictionary<string, objData>();
+
+                for (int i = 1; i < (sForegroundSplit.Length - 1); i += 2)
+                {
+                    objData obj = new objData(sForegroundSplit[i + 1], false);
+
+                    if (!dictionary.ContainsKey(obj.GetKey()))
+                    {
+                        obj.m_ClassName = sForegroundSplit[i];
+                        obj.m_IsRegToForeground = true;
+                        dictionary.Add(obj.GetKey(), obj);
+                    }
+                }
+
+                telnet.WriteLine("PerActDisp 50");
+                System.Threading.Thread.Sleep(2000); // 2sec
+
+                s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                s = s.Replace(" ", "");
+
+                string[] sBackGroundSplit = s.Split(new Char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 1; i < (sBackGroundSplit.Length - 3); i += 4)
+                {
+                    objData obj = new objData(sBackGroundSplit[i + 1], false);
+
+                    if (!dictionary.ContainsKey(obj.GetKey()))
+                    {
+                        obj.m_ClassName = sBackGroundSplit[i];
+                        obj.m_IsRegToBackround = true;
+                        obj.m_TicksArray[0] = Convert.ToInt32(sBackGroundSplit[i + 2].Replace("onTick#", ""));
+                        obj.m_TicksArray[1] = Convert.ToInt32(sBackGroundSplit[i + 3].Replace("onTick#", ""));
+                        dictionary.Add(obj.GetKey(), obj);
+                    }
+                    else
+                    {
+                        dictionary[obj.GetKey()].m_IsRegToBackround = true;
+                        dictionary[obj.GetKey()].m_TicksArray[0] = Convert.ToInt32(sBackGroundSplit[i + 2].Replace("onTick#", ""));
+                        dictionary[obj.GetKey()].m_TicksArray[1] = Convert.ToInt32(sBackGroundSplit[i + 3].Replace("onTick#", ""));
+                    }
+                }
+
+                telnet.WriteLine("PerActDisp 100");
+                System.Threading.Thread.Sleep(1000);
+
+                s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                s = s.Replace(" ", "");
+
+                string[] sOneSecSplit = s.Split(new Char[] { ',', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+
+                for (int i = 1; i < (sOneSecSplit.Length - 2); i += 3)
+                {
+                    objData obj = new objData(sOneSecSplit[i + 1], false);
+
+                    if (!dictionary.ContainsKey(obj.GetKey()))
+                    {
+                        obj.m_ClassName = sOneSecSplit[i];
+                        obj.m_IsRegToOnesec = true;
+                        obj.m_TicksArray[0] = Convert.ToInt32(sOneSecSplit[i + 2].Replace("onTick#", ""));
+                        dictionary.Add(obj.GetKey(), obj);
+                    }
+                    else
+                    {
+                        dictionary[obj.GetKey()].m_IsRegToOnesec = true;
+                        dictionary[obj.GetKey()].m_TicksArray[2] = Convert.ToInt32(sOneSecSplit[i + 2].Replace("onTick#", ""));
+                    }
+                }
+
+                OutFromDbg();
+
+                int rowNum = 0;
+                foreach (string key in dictionary.Keys)
+                {
+                    DataGridViewButtonColumn DelAddButtonColumn = new DataGridViewButtonColumn();
+                    DelAddButtonColumn.Name = "ActionColumn";
+                    DelAddButtonColumn.Text = "Delete";
+                    dataGridView1.Rows.Add(new object[] {dictionary[key].m_ClassName,
+                                              dictionary[key].m_ClassID.ToString(),
+                                              dictionary[key].m_InstanceId,
+                                              dictionary[key].m_IsRegToForeground,
+                                              dictionary[key].m_TicksArray[0].ToString() + ", " + dictionary[key].m_TicksArray[1].ToString(),
+                                              dictionary[key].m_TicksArray[2].ToString(),
+                                              DelAddButtonColumn
+                                              });
+                    dataGridView1.Rows[rowNum].Cells[6].Value = "Delete";
+                    ++rowNum;
+                }
             }
         }
     }
