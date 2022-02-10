@@ -40,6 +40,11 @@ namespace ApolloGoldStars
                 backgroundWorker1.ReportProgress(i);
             }
             */
+            
+        }
+
+        void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
             dataGridView1.Show();
         }
 
