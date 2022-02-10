@@ -20,16 +20,23 @@ namespace ApolloGoldStars
 
             MainForm.connection.PeractObjs(this.dataGridView1);
         }
-
+        
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
+            string strData = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString() + " " + MainForm.connection.ConvertToCorrectFormat(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
             if (dataGridView1.Rows[e.RowIndex].Cells[6].Value == "Delete")
             {
+                MainForm.connection.DeleteFromPerAct(strData);
                 dataGridView1.Rows[e.RowIndex].Cells[6].Value = "Add";
                 dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Gray;
             }
             else
             {
+                MainForm.connection.AddtoPerAct(strData);
                 dataGridView1.Rows[e.RowIndex].Cells[6].Value = "Delete";
                 dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
             }
@@ -41,6 +48,18 @@ namespace ApolloGoldStars
                         dataGridView1.Columns.Cast<DataGridViewColumn>().Sum(x => x.Width)
                         + (dataGridView1.RowHeadersVisible ? dataGridView1.RowHeadersWidth : 0) + 30;
             this.Width = dataGridView1.Width + 10;
+        }
+
+        private void PeractObjs_FormClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                string strData = row.Cells[1].Value.ToString() + " " + MainForm.connection.ConvertToCorrectFormat(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                if (row.Cells[6].Value == "Add")
+                {
+                    MainForm.connection.AddtoPerAct(strData);
+                }
+            }
         }
     }
 }

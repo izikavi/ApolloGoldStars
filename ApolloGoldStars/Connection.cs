@@ -448,8 +448,8 @@ namespace ApolloGoldStars
                                               dictionary[key].m_ClassID.ToString(),
                                               dictionary[key].m_InstanceId,
                                               dictionary[key].m_IsRegToForeground,
-                                              dictionary[key].m_TicksArray[0].ToString() + ", " + dictionary[key].m_TicksArray[1].ToString(),
-                                              dictionary[key].m_TicksArray[2].ToString(),
+                                              (dictionary[key].m_TicksArray[0] == -1 ? "" : dictionary[key].m_TicksArray[0]) + ", " + (dictionary[key].m_TicksArray[1] == -1 ? "" : dictionary[key].m_TicksArray[1]),
+                                              (dictionary[key].m_TicksArray[2] == -1 ? "" : dictionary[key].m_TicksArray[2]),
                                               DelAddButtonColumn
                                               });
                     dataGridView1.Rows[rowNum].Cells[6].Value = "Delete";
@@ -473,6 +473,65 @@ namespace ApolloGoldStars
                 telnet.WriteLine("AddObjForPerAct " + input);
                 OutFromDbg();
             }
+        }
+        
+        private bool AllThePartFFFF(string[] a_arr, int a_start, int a_end)
+        {
+            for (int i = a_start; i <= a_end; ++i)
+            {
+                if (a_arr[i] != "ffff")
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public string ConvertToCorrectFormat(string a_atr)
+        {
+            int converToNum = 0;
+            string converToString = "";
+            string res = "";
+            string[] words = a_atr.Split(':');
+            if (words[2] != "ffff" && true == AllThePartFFFF(words, 3, 8))
+            {
+                res += "0.";
+                converToNum = Convert.ToInt32(words[2]);
+                ++converToNum;
+                converToString = Convert.ToString(converToNum);
+                res += converToString;
+            }
+            else if (words[8] != "ffff" && true == AllThePartFFFF(words, 2, 7))
+            {
+                res += "0.";
+                converToNum = Convert.ToInt32(words[8]);
+                ++converToNum;
+                converToString = Convert.ToString(converToNum);
+                res += converToString;
+            }
+            else
+            {
+                res += "0.";
+                converToNum = Convert.ToInt32(words[2]);
+                ++converToNum;
+                converToString = Convert.ToString(converToNum);
+                res += converToString;
+                for (int i = 3; i <= 8; ++i)
+                {
+                    if (words[i] == "ffff")
+                    {
+                        res += ".0";
+                    }
+                    else
+                    {
+                        converToNum = Convert.ToInt32(words[i]);
+                        ++converToNum;
+                        converToString = Convert.ToString(converToNum);
+                        res += '.';
+                        res += converToString;
+                    }
+                }
+            }
+            return res;
         }
     }
 }
