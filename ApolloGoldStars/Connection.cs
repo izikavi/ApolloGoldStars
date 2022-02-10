@@ -31,7 +31,7 @@ namespace ApolloGoldStars
         }
 
         public void OutFromDbg()
-        {
+        {            
             telnet.WriteLine("exit");
             System.Threading.Thread.Sleep(1000);
         }
@@ -40,13 +40,13 @@ namespace ApolloGoldStars
         {
             telnet.WriteLine("dbg");
             string s = telnet.Read();
-            if (s.IndexOf(">") == -1)
+            if (s.IndexOf(">") == -1 || s.IndexOf("Please try again") != -1)
             {
                 System.Threading.Thread.Sleep(1000);
                 telnet.WriteLine("dbg");
                 s = telnet.Read();
                 if (s.IndexOf(">") != -1)
-                {                
+                {
                     return true;
                 }
                 else
@@ -237,6 +237,7 @@ namespace ApolloGoldStars
                 {
                     System.Threading.Thread.Sleep(1200); // sec
                     telnet.WriteLine("PeractStat");
+                    System.Threading.Thread.Sleep(100);
                     string s = telnet.Read();
                     s = s.Replace("\0", "");
                     s = s.Substring(s.IndexOf("\n"));
