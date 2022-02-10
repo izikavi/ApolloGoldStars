@@ -7,21 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ApolloGoldStars
 {
     public partial class PeformanceAnalyzer : Form
     {
-
         public PeformanceAnalyzer(string sCardName)
         {
             InitializeComponent();
             this.Text = sCardName + " Peformance Analyzer";
-        }
-
-        private void PeformanceAnalyzer_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void PeriodicRunButton_Click(object sender, EventArgs e)
@@ -67,14 +62,11 @@ namespace ApolloGoldStars
         private void HighObjButton_Click(object sender, EventArgs e)
         {
             HighCunsomersData highCunsomersData = new HighCunsomersData(Connection.sCardName, Convert.ToInt32(ThresholdNum.Value.ToString()));
+            //processBar process = new processBar();
             this.Hide();
             highCunsomersData.ShowDialog();
+            //process.Show();
             this.Show();
-        }
-
-        private void PeformanceAnalyzer_Load_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

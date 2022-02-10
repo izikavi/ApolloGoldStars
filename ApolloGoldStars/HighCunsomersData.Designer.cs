@@ -36,6 +36,9 @@
             this.max = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExceptionsPerSec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.PerformanceProgressBar = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,14 +52,12 @@
             this.max,
             this.avg,
             this.ExceptionsPerSec});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 151);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 252);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(912, 291);
+            this.dataGridView1.Size = new System.Drawing.Size(1376, 485);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // name
             // 
@@ -100,24 +101,50 @@
             // ExceptionsPerSec
             // 
             this.ExceptionsPerSec.HeaderText = "Exceptions per 1sec";
+            this.ExceptionsPerSec.MinimumWidth = 8;
             this.ExceptionsPerSec.Name = "ExceptionsPerSec";
+            this.ExceptionsPerSec.Width = 150;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(650, 344);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 54);
+            this.label1.TabIndex = 3;
+            this.label1.Text = " ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PerformanceProgressBar
+            // 
+            this.PerformanceProgressBar.Location = new System.Drawing.Point(16, 207);
+            this.PerformanceProgressBar.Name = "PerformanceProgressBar";
+            this.PerformanceProgressBar.Size = new System.Drawing.Size(1376, 71);
+            this.PerformanceProgressBar.TabIndex = 2;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // HighCunsomersData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(983, 489);
+            this.ClientSize = new System.Drawing.Size(1404, 815);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.PerformanceProgressBar);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HighCunsomersData";
             this.Text = "HighCunsomersData";
             this.Load += new System.EventHandler(this.HighCunsomersData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -130,5 +157,8 @@
         private DataGridViewTextBoxColumn max;
         private DataGridViewTextBoxColumn avg;
         private DataGridViewTextBoxColumn ExceptionsPerSec;
+        private Label label1;
+        private ProgressBar PerformanceProgressBar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
