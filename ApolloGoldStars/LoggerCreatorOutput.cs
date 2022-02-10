@@ -18,10 +18,5 @@ namespace ApolloGoldStars
             label1.Text = sOutput;
             this.Text = sCardName+ " Logger Creator Output";
         }
-
-        private void LoggerCreatorOutput_Load(object sender, EventArgs e)
-        {
-            label1.Top = 220;
-        }
     }
 }

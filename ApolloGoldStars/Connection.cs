@@ -457,6 +457,22 @@ namespace ApolloGoldStars
                 }
             }
         }
-    }
 
+        public void DeleteFromPerAct(string input)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("DelObjFromPerAct " + input);
+                OutFromDbg();
+            }
+        }
+        public void AddtoPerAct(string input)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("AddObjForPerAct " + input);
+                OutFromDbg();
+            }
+        }
+    }
 }
