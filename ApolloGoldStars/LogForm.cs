@@ -46,6 +46,7 @@ namespace ApolloGoldStars
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*
             Application oPPT;
             Presentations objPresSet;
             Presentation objPres;
@@ -56,6 +57,7 @@ namespace ApolloGoldStars
             objPresSet = oPPT.Presentations;
             objPres = objPresSet.Open("C:\Users\iavinoam\Downloads\Techthon22- Apollo Gold star.pptx", MsoTriState.msoFalse,
                     MsoTriState.msoTrue, MsoTriState.msoTrue);
+            */
         }
     }
 }
