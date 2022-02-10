@@ -292,10 +292,15 @@ namespace ApolloGoldStars
                     dictionary[obj.GetKey()].m_Values.Add(time);
                 }
 
-
+                //dictionary.Sort
                 foreach (string key in dictionary.Keys)
                 {
-                    dt.Rows.Add(new string[] {dictionary[key].m_ClassName,dictionary[key].m_InstanceId,dictionary[key].})
+                    dt.Rows.Add(new object[] {dictionary[key].m_ClassName,
+                                              dictionary[key].m_InstanceId,
+                                              dictionary[key].m_Priority == 1 ? "foreground" : dictionary[key].m_Priority == 50 ? "background" : "one sec",
+                                              dictionary[key].GetMaxTime(),
+                                              dictionary[key].GetAvgTime(),
+                                              dictionary[key].m_Values.Count()/2});
                 }
             }
 
