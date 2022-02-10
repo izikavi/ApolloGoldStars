@@ -51,11 +51,12 @@
             this.Background,
             this.OneSecond,
             this.action});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 195);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 117);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1145, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(802, 301);
             this.dataGridView1.TabIndex = 0;
             // 
             // Name
@@ -120,15 +121,16 @@
             // 
             // PeractObjs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1173, 708);
+            this.ClientSize = new System.Drawing.Size(821, 425);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Text = "PeractObjs";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
