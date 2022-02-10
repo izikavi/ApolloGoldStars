@@ -71,7 +71,12 @@ namespace ApolloGoldStars
 
         private void peractObjsRegButton_Click(object sender, EventArgs e)
         {
-
+            PeractObjs peractObjs = new PeractObjs(Connection.sCardName);
+            //processBar process = new processBar();
+            this.Hide();
+            peractObjs.ShowDialog();
+            //process.Show();
+            this.Show();
         }
     }
 }

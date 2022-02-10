@@ -12,9 +12,13 @@ namespace ApolloGoldStars
 {
     public partial class PeractObjs : Form
     {
-        public PeractObjs()
+        public PeractObjs(string sCardName)
         {
             InitializeComponent();
+
+            this.Text = sCardName + " Peract Objs";
+
+            MainForm.connection.PeractObjs(this.dataGridView1);
         }
     }
 }

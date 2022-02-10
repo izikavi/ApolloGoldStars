@@ -15,6 +15,14 @@ namespace ApolloGoldStars
         public List<int> m_listPriority { get; set; }
         public List<int> m_Values { get; set; } = new List<int>();
 
+        public bool m_IsRegToForeground { get; set; }
+
+        public bool m_IsRegToBackround { get; set; }
+
+        public bool m_IsRegToOnesec { get; set; }
+
+        public int[] m_TicksArray { get; set;}
+
         private bool m_fullKey;
         public string GetKey()
         {
@@ -28,13 +36,21 @@ namespace ApolloGoldStars
         
         public objData(string s, bool fullKey = true)
         {
-            if (!fullKey)
+            if (fullKey)
             {
-                m_ClassName = s;
+                m_ClassID = Convert.ToInt32(s.Substring(0, s.IndexOf(": ")));
+                m_InstanceId = s.Substring(s.IndexOf(": ") + 2, s.IndexOf(" Priority ") - (s.IndexOf(": ") + 2));
+                m_Priority = Convert.ToInt32(s.Substring(s.IndexOf(" Priority ") + 10));
             }
-            m_ClassID = Convert.ToInt32(s.Substring(0,s.IndexOf(": ")));
-            m_InstanceId = s.Substring(s.IndexOf(": ") + 2, s.IndexOf(" Priority ") - (s.IndexOf(": ") + 2));
-            m_Priority = Convert.ToInt32(s.Substring(s.IndexOf(" Priority ") + 10));
+            else
+            {
+                m_ClassID = Convert.ToInt32(s.Substring(0, s.IndexOf(":")));
+                m_InstanceId = s.Substring(s.IndexOf(":")+1);
+                m_TicksArray = new int[2];
+                m_TicksArray[0] = -1;
+                m_TicksArray[1] = -1;
+            }
+
             m_fullKey = fullKey;
         }
 
