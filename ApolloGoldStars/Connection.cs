@@ -252,6 +252,12 @@ namespace ApolloGoldStars
         public DataTable HighObjConsumption(int thresholdTime)
         {
             DataTable dt = new DataTable();
+            dt.Columns.Add("Class name");
+            dt.Columns.Add("Instance ID");
+            dt.Columns.Add("Period");
+            dt.Columns.Add("Max");
+            dt.Columns.Add("Avg");
+            dt.Columns.Add("PerSec");
 
             if (GoToDbg())
             {
@@ -286,12 +292,34 @@ namespace ApolloGoldStars
                     dictionary[obj.GetKey()].m_Values.Add(time);
                 }
 
-                //foreach(string key)
 
-                int x = 0;
+                foreach (string key in dictionary.Keys)
+                {
+                    dt.Rows.Add(new string[] {dictionary[key].m_ClassName,dictionary[key].m_InstanceId,dictionary[key].})
+                }
             }
 
             return dt;
         }
+
+        public string GetClassName(int nClassId)
+        {
+            if (GoToDbg())
+            {
+                telnet.WriteLine("PfClassInfo "+nClassId);
+                string s = telnet.Read();
+                s = s.Replace("\0", "");
+                s = s.Substring(s.IndexOf("\n"));
+                string sClasName = s.Substring(s.IndexOf("Id5_Format")+10,s.IndexOf(nClassId.ToString())-(s.IndexOf("Id5_Format") + 10)).Trim();
+                OutFromDbg();
+                return sClasName;
+
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
+
 }
