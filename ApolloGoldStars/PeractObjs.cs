@@ -39,7 +39,8 @@ namespace ApolloGoldStars
         {
             dataGridView1.Width =
                         dataGridView1.Columns.Cast<DataGridViewColumn>().Sum(x => x.Width)
-                        + (dataGridView1.RowHeadersVisible ? dataGridView1.RowHeadersWidth : 0) + 15;
+                        + (dataGridView1.RowHeadersVisible ? dataGridView1.RowHeadersWidth : 0) + 30;
+            this.Width = dataGridView1.Width + 10;
         }
     }
 }
