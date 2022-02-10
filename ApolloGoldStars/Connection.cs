@@ -242,7 +242,7 @@ namespace ApolloGoldStars
                     s = s.Substring(s.IndexOf("\n"));
                     sOutput += s;
                 }
-                telnet.WriteLine("SetTickTimeCollection 0");
+                telnet.WriteLine("ClearTimeCollection");
                 OutFromDbg();
             }
 

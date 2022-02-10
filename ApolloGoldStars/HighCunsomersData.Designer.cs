@@ -47,12 +47,14 @@
             this.period,
             this.max,
             this.avg});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 143);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 86);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(879, 295);
+            this.dataGridView1.Size = new System.Drawing.Size(615, 177);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // name
             // 
@@ -95,16 +97,18 @@
             // 
             // HighCunsomersData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(903, 450);
+            this.ClientSize = new System.Drawing.Size(632, 270);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HighCunsomersData";
             this.Text = "HighCunsomersData";
+            this.Load += new System.EventHandler(this.HighCunsomersData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

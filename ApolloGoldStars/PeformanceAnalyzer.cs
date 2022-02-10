@@ -71,5 +71,10 @@ namespace ApolloGoldStars
             highCunsomersData.ShowDialog();
             this.Show();
         }
+
+        private void PeformanceAnalyzer_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
