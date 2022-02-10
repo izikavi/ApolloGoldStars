@@ -45,6 +45,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
@@ -54,12 +56,12 @@
             this.max,
             this.avg,
             this.ExceptionsPerSec});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 151);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 252);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1376, 485);
+            this.dataGridView1.Size = new System.Drawing.Size(1091, 485);
             this.dataGridView1.TabIndex = 0;
             // 
             // name
@@ -68,12 +70,14 @@
             this.name.MinimumWidth = 8;
             this.name.Name = "name";
             this.name.ReadOnly = true;
-            this.name.Width = 150;
+            this.name.Width = 126;
             // 
             // ClassId
             // 
             this.ClassId.HeaderText = "ClassId";
+            this.ClassId.MinimumWidth = 8;
             this.ClassId.Name = "ClassId";
+            this.ClassId.Width = 104;
             // 
             // instance
             // 
@@ -81,7 +85,7 @@
             this.instance.HeaderText = "Instance ID";
             this.instance.MinimumWidth = 8;
             this.instance.Name = "instance";
-            this.instance.Width = 90;
+            this.instance.Width = 126;
             // 
             // period
             // 
@@ -89,7 +93,7 @@
             this.period.MinimumWidth = 8;
             this.period.Name = "period";
             this.period.ReadOnly = true;
-            this.period.Width = 150;
+            this.period.Width = 98;
             // 
             // max
             // 
@@ -97,7 +101,7 @@
             this.max.MinimumWidth = 8;
             this.max.Name = "max";
             this.max.ReadOnly = true;
-            this.max.Width = 150;
+            this.max.Width = 112;
             // 
             // avg
             // 
@@ -105,20 +109,20 @@
             this.avg.MinimumWidth = 8;
             this.avg.Name = "avg";
             this.avg.ReadOnly = true;
-            this.avg.Width = 150;
+            this.avg.Width = 111;
             // 
             // ExceptionsPerSec
             // 
             this.ExceptionsPerSec.HeaderText = "Exceptions per 1sec";
             this.ExceptionsPerSec.MinimumWidth = 8;
             this.ExceptionsPerSec.Name = "ExceptionsPerSec";
-            this.ExceptionsPerSec.Width = 150;
+            this.ExceptionsPerSec.Width = 154;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(650, 344);
+            this.label1.Location = new System.Drawing.Point(493, 427);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 54);
             this.label1.TabIndex = 3;
@@ -127,17 +131,17 @@
             // 
             // PerformanceProgressBar
             // 
-            this.PerformanceProgressBar.Location = new System.Drawing.Point(16, 207);
+            this.PerformanceProgressBar.Location = new System.Drawing.Point(17, 308);
             this.PerformanceProgressBar.Name = "PerformanceProgressBar";
-            this.PerformanceProgressBar.Size = new System.Drawing.Size(1376, 71);
+            this.PerformanceProgressBar.Size = new System.Drawing.Size(1091, 71);
             this.PerformanceProgressBar.TabIndex = 2;
             // 
             // backgroundWorker1
             // 
             this.backgroundWorker1.WorkerReportsProgress = true;
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
             // 
             // HighCunsomersData
             // 
@@ -145,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1404, 815);
+            this.ClientSize = new System.Drawing.Size(1140, 815);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PerformanceProgressBar);
             this.Controls.Add(this.dataGridView1);

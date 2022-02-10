@@ -42,8 +42,8 @@ namespace ApolloGoldStars
             int oldTimeOutMs = TimeOutMs;
             TimeOutMs = LoginTimeOutMs;
             string s = Read();
-            //if (string.IsNullOrWhiteSpace(s))
-            //    return s;
+            if (string.IsNullOrWhiteSpace(s))
+                s += ":";
             if (!s.TrimEnd().EndsWith(":"))
                throw new Exception("Failed to connect : no login prompt");
             WriteLine(Username);

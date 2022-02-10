@@ -90,7 +90,7 @@
             this.clearHisAll.Name = "clearHisAll";
             this.clearHisAll.Size = new System.Drawing.Size(176, 54);
             this.clearHisAll.TabIndex = 4;
-            this.clearHisAll.Text = "clear history\r\nbefore command";
+            this.clearHisAll.Text = "Clear history\r\nbefore command";
             this.clearHisAll.UseVisualStyleBackColor = false;
             // 
             // portCheckBox
@@ -213,7 +213,7 @@
             this.portClearhis.Name = "portClearhis";
             this.portClearhis.Size = new System.Drawing.Size(176, 54);
             this.portClearhis.TabIndex = 20;
-            this.portClearhis.Text = "clear history\r\nbefore command";
+            this.portClearhis.Text = "Clear history\r\nbefore command";
             this.portClearhis.UseVisualStyleBackColor = false;
             // 
             // LoggerCreator

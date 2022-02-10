@@ -90,9 +90,11 @@
             // 
             // PeriodicRunButton
             // 
+            this.PeriodicRunButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
+            this.PeriodicRunButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.PeriodicRunButton.Location = new System.Drawing.Point(333, 298);
             this.PeriodicRunButton.Name = "PeriodicRunButton";
-            this.PeriodicRunButton.Size = new System.Drawing.Size(111, 33);
+            this.PeriodicRunButton.Size = new System.Drawing.Size(320, 62);
             this.PeriodicRunButton.TabIndex = 16;
             this.PeriodicRunButton.Text = "Run";
             this.PeriodicRunButton.UseVisualStyleBackColor = true;
@@ -109,9 +111,11 @@
             // 
             // HighObjButton
             // 
+            this.HighObjButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
+            this.HighObjButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.HighObjButton.Location = new System.Drawing.Point(331, 468);
             this.HighObjButton.Name = "HighObjButton";
-            this.HighObjButton.Size = new System.Drawing.Size(111, 33);
+            this.HighObjButton.Size = new System.Drawing.Size(320, 62);
             this.HighObjButton.TabIndex = 18;
             this.HighObjButton.Text = "Run";
             this.HighObjButton.UseVisualStyleBackColor = true;
