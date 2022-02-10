@@ -35,6 +35,7 @@
             this.period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.max = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.avg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExceptionsPerSec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,13 +47,14 @@
             this.instance,
             this.period,
             this.max,
-            this.avg});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 86);
+            this.avg,
+            this.ExceptionsPerSec});
+            this.dataGridView1.Location = new System.Drawing.Point(11, 151);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(615, 177);
+            this.dataGridView1.Size = new System.Drawing.Size(912, 291);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,13 +97,18 @@
             this.avg.ReadOnly = true;
             this.avg.Width = 150;
             // 
+            // ExceptionsPerSec
+            // 
+            this.ExceptionsPerSec.HeaderText = "Exceptions per 1sec";
+            this.ExceptionsPerSec.Name = "ExceptionsPerSec";
+            // 
             // HighCunsomersData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(632, 270);
+            this.ClientSize = new System.Drawing.Size(983, 489);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -122,5 +129,6 @@
         private DataGridViewTextBoxColumn period;
         private DataGridViewTextBoxColumn max;
         private DataGridViewTextBoxColumn avg;
+        private DataGridViewTextBoxColumn ExceptionsPerSec;
     }
 }
