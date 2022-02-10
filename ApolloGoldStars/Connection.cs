@@ -10,14 +10,17 @@ namespace ApolloGoldStars
         private TelnetConnection? telnet;
         private bool disposedValue;
         public static string sCardName = "";
-        private bool m_Is9901;
         private int m_Slot;
 
         public Connection(string host, int port, int slot, bool is9901, string username, string passw)
         {
             telnet = new TelnetConnection(host, port);
             telnet.Login(username, passw, 100);
-            m_Is9901 = is9901;
+            if (!is9901)
+            {
+                telnet.WriteLine("telnet op" + slot.ToString());
+                telnet.Login(username, passw, 100);
+            }
             m_Slot = slot;
             if(GoToDbg())
             {
