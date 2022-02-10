@@ -24,7 +24,7 @@ namespace ApolloGoldStars
             m_InstanceId = s.Substring(s.IndexOf(": ") + 2, s.IndexOf(" Priority ") - (s.IndexOf(": ") + 2));
             m_Priority = Convert.ToInt32(s.Substring(s.IndexOf(" Priority ") + 10));
 
-            m_ClassName = MainForm.connection.GetClassName(m_ClassID);
+            //m_ClassName = MainForm.connection.GetClassName(m_ClassID);
         }
 
         public int GetMaxTime()

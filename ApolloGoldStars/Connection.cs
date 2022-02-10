@@ -295,6 +295,8 @@ namespace ApolloGoldStars
                 //dictionary.Sort
                 foreach (string key in dictionary.Keys)
                 {
+                    dictionary[key].m_ClassName = GetClassName(dictionary[key].m_ClassID);
+
                     dt.Rows.Add(new object[] {dictionary[key].m_ClassName,
                                               dictionary[key].m_InstanceId,
                                               dictionary[key].m_Priority == 1 ? "foreground" : dictionary[key].m_Priority == 50 ? "background" : "one sec",
