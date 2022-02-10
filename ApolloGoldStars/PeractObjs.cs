@@ -26,11 +26,12 @@ namespace ApolloGoldStars
             if (dataGridView1.Rows[e.RowIndex].Cells[6].Value == "Delete")
             {
                 dataGridView1.Rows[e.RowIndex].Cells[6].Value = "Add";
-                //dataGridView1.Rows[e.RowIndex].b
+                dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Gray;
             }
             else
             {
                 dataGridView1.Rows[e.RowIndex].Cells[6].Value = "Delete";
+                dataGridView1.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
             }
         }
 
