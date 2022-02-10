@@ -10,11 +10,15 @@ namespace ApolloGoldStars
         private TelnetConnection? telnet;
         private bool disposedValue;
         public static string sCardName = "";
+        private bool m_Is9901;
+        private int m_Slot;
 
         public Connection(string host, int port, int slot, bool is9901, string username, string passw)
         {
             telnet = new TelnetConnection(host, port);
             telnet.Login(username, passw, 100);
+            m_Is9901 = is9901;
+            m_Slot = slot;
             if(GoToDbg())
             {
                 telnet.WriteLine("");
@@ -308,7 +312,6 @@ namespace ApolloGoldStars
 
                 foreach (string key in dictionary.Keys)
                 {
-
                     dataGridView1.Rows.Add(new object[] {classIdToClassNameDic[dictionary[key].m_ClassID],
                                               dictionary[key].m_ClassID.ToString(),
                                               dictionary[key].m_InstanceId,

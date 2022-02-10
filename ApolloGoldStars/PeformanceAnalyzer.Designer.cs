@@ -38,6 +38,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ThresholdNum = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.peractObjsRegButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeriodicSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdNum)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(566, 230);
+            this.label3.Location = new System.Drawing.Point(672, 233);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 25);
@@ -162,6 +164,29 @@
             0,
             0});
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(28, 607);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(298, 90);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Show objects\r\nperact registration";
+            // 
+            // peractObjsRegButton
+            // 
+            this.peractObjsRegButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
+            this.peractObjsRegButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.peractObjsRegButton.Location = new System.Drawing.Point(331, 635);
+            this.peractObjsRegButton.Name = "peractObjsRegButton";
+            this.peractObjsRegButton.Size = new System.Drawing.Size(320, 62);
+            this.peractObjsRegButton.TabIndex = 22;
+            this.peractObjsRegButton.Text = "Run";
+            this.peractObjsRegButton.UseVisualStyleBackColor = true;
+            this.peractObjsRegButton.Click += new System.EventHandler(this.peractObjsRegButton_Click);
+            // 
             // PeformanceAnalyzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -169,6 +194,8 @@
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 748);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.peractObjsRegButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ThresholdNum);
             this.Controls.Add(this.label4);
@@ -201,5 +228,7 @@
         private Label label4;
         private Label label5;
         private NumericUpDown ThresholdNum;
+        private Label label7;
+        private Button peractObjsRegButton;
     }
 }

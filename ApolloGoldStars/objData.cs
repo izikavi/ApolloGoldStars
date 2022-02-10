@@ -12,19 +12,26 @@ namespace ApolloGoldStars
         public string m_InstanceId { get; set;}
         public string m_ClassName { get; set; }
         public int m_Priority { get; set; }
+        public List<int> m_listPriority { get; set; }
         public List<int> m_Values { get; set; } = new List<int>();
+
+        private bool m_fullKey;
         public string GetKey()
         {
-            return m_ClassID.ToString() + m_InstanceId + m_Priority.ToString();
+            string key = m_ClassID.ToString() + m_InstanceId;
+            if (m_fullKey)
+            {
+                key += m_Priority.ToString();
+            }
+            return key;
         }
         
-        public objData(string s)
+        public objData(string s, bool fullKey = true)
         {
             m_ClassID = Convert.ToInt32(s.Substring(0,s.IndexOf(": ")));
             m_InstanceId = s.Substring(s.IndexOf(": ") + 2, s.IndexOf(" Priority ") - (s.IndexOf(": ") + 2));
             m_Priority = Convert.ToInt32(s.Substring(s.IndexOf(" Priority ") + 10));
-
-            //m_ClassName = MainForm.connection.GetClassName(m_ClassID);
+            m_fullKey = fullKey;
         }
 
         public int GetMaxTime()

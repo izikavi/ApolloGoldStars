@@ -68,5 +68,10 @@ namespace ApolloGoldStars
             //process.Show();
             this.Show();
         }
+
+        private void peractObjsRegButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
