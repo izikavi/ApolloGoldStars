@@ -50,11 +50,11 @@ namespace ApolloGoldStars
             this.Width = dataGridView1.Width + 10;
         }
 
-        private void PeractObjs_FormClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void PeractObjs_FormClosing(Object sender, FormClosingEventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                string strData = row.Cells[1].Value.ToString() + " " + MainForm.connection.ConvertToCorrectFormat(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                string strData = row.Cells[1].Value.ToString() + " " + MainForm.connection.ConvertToCorrectFormat(row.Cells[2].Value.ToString());
                 if (row.Cells[6].Value == "Add")
                 {
                     MainForm.connection.AddtoPerAct(strData);
