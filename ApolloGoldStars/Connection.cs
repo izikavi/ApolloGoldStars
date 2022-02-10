@@ -249,15 +249,8 @@ namespace ApolloGoldStars
             return sOutput;
         }
 
-        public DataTable HighObjConsumption(int thresholdTime)
+        public void HighObjConsumption(int thresholdTime, DataGridView dataGridView1)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Class name");
-            dt.Columns.Add("Instance ID");
-            dt.Columns.Add("Period");
-            dt.Columns.Add("Max");
-            dt.Columns.Add("Avg");
-            dt.Columns.Add("PerSec");
 
             if (GoToDbg())
             {
@@ -274,6 +267,10 @@ namespace ApolloGoldStars
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
                 s = s.Substring(s.IndexOf("\n"));
+
+                System.Threading.Thread.Sleep(100);
+                telnet.WriteLine("ClearTimeCollection");
+                //telnet.WriteLine("SetObjectTimeCollection 0");
                 OutFromDbg();
                 string[] sSplit = s.Split("Time Consumption for");
                 Dictionary<string,objData> dictionary = new Dictionary<string, objData>();
@@ -292,32 +289,41 @@ namespace ApolloGoldStars
                     dictionary[obj.GetKey()].m_Values.Add(time);
                 }
 
+                Dictionary<int,string> classIdToClassNameDic = new Dictionary<int,string>();
+
+                foreach (string key in dictionary.Keys)
+                {
+                    if (!classIdToClassNameDic.ContainsKey(dictionary[key].m_ClassID))
+                    {
+                        classIdToClassNameDic[dictionary[key].m_ClassID] = GetClassName(dictionary[key].m_ClassID);
+                    }
+                }
+
                 //dictionary.Sort
                 foreach (string key in dictionary.Keys)
                 {
-                    dictionary[key].m_ClassName = GetClassName(dictionary[key].m_ClassID);
 
-                    dt.Rows.Add(new object[] {dictionary[key].m_ClassName,
+                    dataGridView1.Rows.Add(new object[] {classIdToClassNameDic[dictionary[key].m_ClassID],
+                                              dictionary[key].m_ClassID.ToString(),
                                               dictionary[key].m_InstanceId,
                                               dictionary[key].m_Priority == 1 ? "foreground" : dictionary[key].m_Priority == 50 ? "background" : "one sec",
                                               dictionary[key].GetMaxTime(),
-                                              dictionary[key].GetAvgTime(),
+                                              String.Format("{0:0.##}", dictionary[key].GetAvgTime()),
                                               dictionary[key].m_Values.Count()/2});
                 }
             }
-
-            return dt;
         }
 
-        public string GetClassName(int nClassId)
+        private string GetClassName(int nClassId)
         {
             if (GoToDbg())
             {
-                telnet.WriteLine("PfClassInfo "+nClassId);
+                telnet.WriteLine("PfClassInfo " + nClassId);
+                System.Threading.Thread.Sleep(100);
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
                 s = s.Substring(s.IndexOf("\n"));
-                string sClasName = s.Substring(s.IndexOf("Id5_Format")+10,s.IndexOf(nClassId.ToString())-(s.IndexOf("Id5_Format") + 10)).Trim();
+                string sClasName = s.Substring(s.IndexOf("Id5_Format") + 10, s.LastIndexOf(nClassId.ToString()) - (s.IndexOf("Id5_Format") + 10)).Trim();
                 OutFromDbg();
                 return sClasName;
 

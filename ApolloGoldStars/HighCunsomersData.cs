@@ -16,7 +16,8 @@ namespace ApolloGoldStars
         {
             InitializeComponent();
             this.Text = sCardName + " High Cunsomers Data";
-            DataTable dt = MainForm.connection.HighObjConsumption(threshold);
+            MainForm.connection.HighObjConsumption(threshold, this.dataGridView1);
+
 
             //foreach (DataRow dr in dt.Rows)
             //{
