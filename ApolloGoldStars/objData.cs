@@ -28,6 +28,10 @@ namespace ApolloGoldStars
         
         public objData(string s, bool fullKey = true)
         {
+            if (!fullKey)
+            {
+                m_ClassName = s;
+            }
             m_ClassID = Convert.ToInt32(s.Substring(0,s.IndexOf(": ")));
             m_InstanceId = s.Substring(s.IndexOf(": ") + 2, s.IndexOf(" Priority ") - (s.IndexOf(": ") + 2));
             m_Priority = Convert.ToInt32(s.Substring(s.IndexOf(" Priority ") + 10));
