@@ -44,7 +44,7 @@
             this.LoggerCreator.Name = "LoggerCreator";
             this.LoggerCreator.Size = new System.Drawing.Size(219, 141);
             this.LoggerCreator.TabIndex = 0;
-            this.LoggerCreator.Text = "Logger\r\nCreateor";
+            this.LoggerCreator.Text = "Logger\r\nCreator";
             this.LoggerCreator.UseVisualStyleBackColor = false;
             this.LoggerCreator.Click += new System.EventHandler(this.LoggerCreator_Click);
             // 
