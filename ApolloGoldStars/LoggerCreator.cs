@@ -66,9 +66,9 @@ namespace ApolloGoldStars
                 sOutput += MainForm.connection.AlaramPortList(portClearhis.Checked, list);
             }
 
-            if(UserCommandsCheckBox.Checked && userCommandsTextBox.Text!= "")
+            if(UserBox.Checked && UserBoxTextBox.Text!= "")
             {
-                sOutput += MainForm.connection.UserDbgCommands(userCommandsTextBox.Text.Split("\r\n").ToList());
+                sOutput += MainForm.connection.UserDbgCommands(UserBoxTextBox.Text.Split("\r\n").ToList());
             }
 
 
@@ -76,7 +76,7 @@ namespace ApolloGoldStars
             {
                 SaveToFile(sOutput);
             }
-            if(ShowToScreenCheckBox.Checked)
+            if(ShowScreenCheckBox.Checked)
             {
                 LoggerCreatorOutput loggerCreatorOutput = new LoggerCreatorOutput(sOutput, m_sCardName);
                 this.Hide();
