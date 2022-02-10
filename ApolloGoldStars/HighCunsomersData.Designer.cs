@@ -159,6 +159,6 @@
         private DataGridViewTextBoxColumn ExceptionsPerSec;
         private Label label1;
         private ProgressBar PerformanceProgressBar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -249,7 +249,7 @@ namespace ApolloGoldStars
             return sOutput;
         }
 
-        public DataTable HighObjConsumption(int thresholdTime)
+        public DataTable HighObjConsumption(int thresholdTime, System.ComponentModel.BackgroundWorker background)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("Class name");
@@ -261,6 +261,7 @@ namespace ApolloGoldStars
 
             if (GoToDbg())
             {
+                background.ReportProgress(7);
                 telnet.WriteLine("SetObjectTimeCollection 1");
                 System.Threading.Thread.Sleep(100);
                 telnet.WriteLine("SetMinConsumptionTime " + thresholdTime);
@@ -270,6 +271,8 @@ namespace ApolloGoldStars
                 telnet.WriteLine("SetTimeConsumptionFlag 1");
                 System.Threading.Thread.Sleep(2000);
                 telnet.WriteLine("PrintTimeConsumption 0");
+
+                background.ReportProgress(20);
 
                 string s = telnet.Read();
                 s = s.Replace("\0", "");
@@ -290,9 +293,11 @@ namespace ApolloGoldStars
                         dictionary.Add(obj.GetKey(),obj);
                     }
                     dictionary[obj.GetKey()].m_Values.Add(time);
+                    background.ReportProgress(20 + i);
                 }
 
                 //dictionary.Sort
+
                 foreach (string key in dictionary.Keys)
                 {
                     dictionary[key].m_ClassName = GetClassName(dictionary[key].m_ClassID);
@@ -305,7 +310,7 @@ namespace ApolloGoldStars
                                               dictionary[key].m_Values.Count()/2});
                 }
             }
-
+            background.ReportProgress(100);
             return dt;
         }
 
