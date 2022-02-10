@@ -39,22 +39,21 @@
             this.openFileDialogButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ShowScreenCheckBox = new System.Windows.Forms.CheckBox();
             this.saveToFilecheckBox = new System.Windows.Forms.CheckBox();
             this.GenerateButton = new System.Windows.Forms.Button();
             this.UserBox = new System.Windows.Forms.CheckBox();
             this.UserBoxTextBox = new System.Windows.Forms.TextBox();
             this.portClearhis = new System.Windows.Forms.CheckBox();
+            this.ShowScreenCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // ShowErrors
             // 
             this.ShowErrors.AutoSize = true;
             this.ShowErrors.BackColor = System.Drawing.Color.Transparent;
-            this.ShowErrors.Location = new System.Drawing.Point(26, 94);
-            this.ShowErrors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowErrors.Location = new System.Drawing.Point(37, 157);
             this.ShowErrors.Name = "ShowErrors";
-            this.ShowErrors.Size = new System.Drawing.Size(108, 19);
+            this.ShowErrors.Size = new System.Drawing.Size(165, 29);
             this.ShowErrors.TabIndex = 0;
             this.ShowErrors.Text = "Show SW Errors\t";
             this.ShowErrors.UseVisualStyleBackColor = false;
@@ -63,10 +62,9 @@
             // 
             this.ShowAlarm.AutoSize = true;
             this.ShowAlarm.BackColor = System.Drawing.Color.Transparent;
-            this.ShowAlarm.Location = new System.Drawing.Point(26, 122);
-            this.ShowAlarm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAlarm.Location = new System.Drawing.Point(37, 204);
             this.ShowAlarm.Name = "ShowAlarm";
-            this.ShowAlarm.Size = new System.Drawing.Size(152, 19);
+            this.ShowAlarm.Size = new System.Drawing.Size(229, 29);
             this.ShowAlarm.TabIndex = 1;
             this.ShowAlarm.Text = "Show Alarm on all ports";
             this.ShowAlarm.UseVisualStyleBackColor = false;
@@ -76,10 +74,9 @@
             // 
             this.ShowAlarmonport.AutoSize = true;
             this.ShowAlarmonport.BackColor = System.Drawing.Color.Transparent;
-            this.ShowAlarmonport.Location = new System.Drawing.Point(26, 153);
-            this.ShowAlarmonport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAlarmonport.Location = new System.Drawing.Point(37, 255);
             this.ShowAlarmonport.Name = "ShowAlarmonport";
-            this.ShowAlarmonport.Size = new System.Drawing.Size(135, 19);
+            this.ShowAlarmonport.Size = new System.Drawing.Size(203, 29);
             this.ShowAlarmonport.TabIndex = 2;
             this.ShowAlarmonport.Text = "Show Alarm on port:";
             this.ShowAlarmonport.UseVisualStyleBackColor = false;
@@ -89,40 +86,36 @@
             // 
             this.clearHisAll.AutoSize = true;
             this.clearHisAll.BackColor = System.Drawing.Color.Transparent;
-            this.clearHisAll.Location = new System.Drawing.Point(297, 113);
-            this.clearHisAll.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.clearHisAll.Location = new System.Drawing.Point(424, 188);
             this.clearHisAll.Name = "clearHisAll";
-            this.clearHisAll.Size = new System.Drawing.Size(118, 34);
+            this.clearHisAll.Size = new System.Drawing.Size(176, 54);
             this.clearHisAll.TabIndex = 4;
             this.clearHisAll.Text = "Clear history\r\nbefore command";
             this.clearHisAll.UseVisualStyleBackColor = false;
             // 
             // portCheckBox
             // 
-            this.portCheckBox.Location = new System.Drawing.Point(190, 153);
-            this.portCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.portCheckBox.Location = new System.Drawing.Point(272, 255);
             this.portCheckBox.Name = "portCheckBox";
-            this.portCheckBox.Size = new System.Drawing.Size(71, 23);
+            this.portCheckBox.Size = new System.Drawing.Size(100, 31);
             this.portCheckBox.TabIndex = 5;
             // 
             // FileNameLabel
             // 
             this.FileNameLabel.AutoSize = true;
             this.FileNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FileNameLabel.Location = new System.Drawing.Point(538, 121);
-            this.FileNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FileNameLabel.Location = new System.Drawing.Point(769, 202);
             this.FileNameLabel.Name = "FileNameLabel";
-            this.FileNameLabel.Size = new System.Drawing.Size(0, 15);
+            this.FileNameLabel.Size = new System.Drawing.Size(0, 25);
             this.FileNameLabel.TabIndex = 9;
             // 
             // FilePathLabel
             // 
             this.FilePathLabel.AutoSize = true;
             this.FilePathLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FilePathLabel.Location = new System.Drawing.Point(539, 140);
-            this.FilePathLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.FilePathLabel.Location = new System.Drawing.Point(770, 234);
             this.FilePathLabel.Name = "FilePathLabel";
-            this.FilePathLabel.Size = new System.Drawing.Size(0, 15);
+            this.FilePathLabel.Size = new System.Drawing.Size(0, 25);
             this.FilePathLabel.TabIndex = 10;
             this.FilePathLabel.TextChanged += new System.EventHandler(this.FileNameLabel_Change);
             // 
@@ -130,10 +123,9 @@
             // 
             this.openFileDialogButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.openFileDialogButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.openFileDialogButton.Location = new System.Drawing.Point(475, 164);
-            this.openFileDialogButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.openFileDialogButton.Location = new System.Drawing.Point(679, 274);
             this.openFileDialogButton.Name = "openFileDialogButton";
-            this.openFileDialogButton.Size = new System.Drawing.Size(148, 38);
+            this.openFileDialogButton.Size = new System.Drawing.Size(211, 63);
             this.openFileDialogButton.TabIndex = 11;
             this.openFileDialogButton.Text = "Select Log File";
             this.openFileDialogButton.UseVisualStyleBackColor = true;
@@ -143,9 +135,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(475, 122);
+            this.label1.Location = new System.Drawing.Point(679, 204);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "File Name:";
             // 
@@ -153,33 +146,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(475, 140);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(679, 234);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 15);
+            this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "File Path:";
-            // 
-            // ShowScreenCheckBox
-            // 
-            this.ShowScreenCheckBox.AutoSize = true;
-            this.ShowScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.ShowScreenCheckBox.Location = new System.Drawing.Point(303, 263);
-            this.ShowScreenCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ShowScreenCheckBox.Name = "ShowScreenCheckBox";
-            this.ShowScreenCheckBox.Size = new System.Drawing.Size(106, 19);
-            this.ShowScreenCheckBox.TabIndex = 15;
-            this.ShowScreenCheckBox.Text = "Show to screen";
-            this.ShowScreenCheckBox.UseVisualStyleBackColor = false;
             // 
             // saveToFilecheckBox
             // 
             this.saveToFilecheckBox.AutoSize = true;
             this.saveToFilecheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.saveToFilecheckBox.Location = new System.Drawing.Point(190, 263);
-            this.saveToFilecheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveToFilecheckBox.Location = new System.Drawing.Point(272, 439);
             this.saveToFilecheckBox.Name = "saveToFilecheckBox";
-            this.saveToFilecheckBox.Size = new System.Drawing.Size(83, 19);
+            this.saveToFilecheckBox.Size = new System.Drawing.Size(125, 29);
             this.saveToFilecheckBox.TabIndex = 16;
             this.saveToFilecheckBox.Text = "Save to file";
             this.saveToFilecheckBox.UseVisualStyleBackColor = false;
@@ -188,10 +167,9 @@
             // 
             this.GenerateButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.GenerateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.GenerateButton.Location = new System.Drawing.Point(475, 253);
-            this.GenerateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GenerateButton.Location = new System.Drawing.Point(679, 421);
             this.GenerateButton.Name = "GenerateButton";
-            this.GenerateButton.Size = new System.Drawing.Size(134, 43);
+            this.GenerateButton.Size = new System.Drawing.Size(211, 71);
             this.GenerateButton.TabIndex = 17;
             this.GenerateButton.Text = "Generate";
             this.GenerateButton.UseVisualStyleBackColor = true;
@@ -201,50 +179,58 @@
             // 
             this.UserBox.AutoSize = true;
             this.UserBox.BackColor = System.Drawing.Color.Transparent;
-            this.UserBox.Location = new System.Drawing.Point(25, 186);
-            this.UserBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserBox.Location = new System.Drawing.Point(36, 306);
             this.UserBox.Name = "UserBox";
-            this.UserBox.Size = new System.Drawing.Size(153, 19);
+            this.UserBox.Size = new System.Drawing.Size(230, 29);
             this.UserBox.TabIndex = 18;
             this.UserBox.Text = "User Debug commands:";
             this.UserBox.UseVisualStyleBackColor = false;
             // 
             // UserBoxTextBox
             // 
-            this.UserBoxTextBox.Location = new System.Drawing.Point(190, 184);
-            this.UserBoxTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserBoxTextBox.Location = new System.Drawing.Point(272, 306);
             this.UserBoxTextBox.Multiline = true;
             this.UserBoxTextBox.Name = "UserBoxTextBox";
-            this.UserBoxTextBox.Size = new System.Drawing.Size(225, 56);
+            this.UserBoxTextBox.Size = new System.Drawing.Size(320, 90);
             this.UserBoxTextBox.TabIndex = 19;
             // 
             // portClearhis
             // 
             this.portClearhis.AutoSize = true;
             this.portClearhis.BackColor = System.Drawing.Color.Transparent;
-            this.portClearhis.Location = new System.Drawing.Point(297, 145);
-            this.portClearhis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.portClearhis.Location = new System.Drawing.Point(424, 242);
             this.portClearhis.Name = "portClearhis";
-            this.portClearhis.Size = new System.Drawing.Size(118, 34);
+            this.portClearhis.Size = new System.Drawing.Size(176, 54);
             this.portClearhis.TabIndex = 20;
             this.portClearhis.Text = "Clear history\r\nbefore command";
             this.portClearhis.UseVisualStyleBackColor = false;
             // 
+            // ShowScreenCheckBox
+            // 
+            this.ShowScreenCheckBox.AutoSize = true;
+            this.ShowScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowScreenCheckBox.Location = new System.Drawing.Point(424, 439);
+            this.ShowScreenCheckBox.Name = "ShowScreenCheckBox";
+            this.ShowScreenCheckBox.Size = new System.Drawing.Size(125, 29);
+            this.ShowScreenCheckBox.TabIndex = 21;
+            this.ShowScreenCheckBox.Text = "Save to file";
+            this.ShowScreenCheckBox.UseVisualStyleBackColor = false;
+            // 
             // LoggerCreator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Plum;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(661, 302);
+            this.ClientSize = new System.Drawing.Size(944, 504);
+            this.Controls.Add(this.ShowScreenCheckBox);
             this.Controls.Add(this.portClearhis);
             this.Controls.Add(this.UserBoxTextBox);
             this.Controls.Add(this.UserBox);
             this.Controls.Add(this.GenerateButton);
             this.Controls.Add(this.saveToFilecheckBox);
-            this.Controls.Add(this.ShowScreenCheckBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.openFileDialogButton);
@@ -257,10 +243,8 @@
             this.Controls.Add(this.ShowErrors);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoggerCreator";
             this.Text = "LoggerCreator";
-            this.Load += new System.EventHandler(this.LoggerCreator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,14 +262,11 @@
         private Button openFileDialogButton;
         private Label label1;
         private Label label2;
-        private CheckBox ShowToScreenCheckBox;
         private CheckBox saveToFilecheckBox;
         private Button GenerateButton;
-        private CheckBox UserCommandsCheckBox;
-        private TextBox userCommandsTextBox;
         private CheckBox portClearhis;
-        private CheckBox ShowScreenCheckBox;
         private CheckBox UserBox;
         private TextBox UserBoxTextBox;
+        private CheckBox ShowScreenCheckBox;
     }
 }

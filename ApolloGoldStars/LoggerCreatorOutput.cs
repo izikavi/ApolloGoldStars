@@ -21,7 +21,7 @@ namespace ApolloGoldStars
 
         private void LoggerCreatorOutput_Load(object sender, EventArgs e)
         {
-
+            label1.Top = 220;
         }
     }
 }
