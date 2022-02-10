@@ -18,7 +18,17 @@ namespace ApolloGoldStars
             m_threshold = threshold;
             InitializeComponent();
             this.Text = sCardName + " High Cunsomers Data";
-            dataGridView1.Hide();
+            MainForm.connection.HighObjConsumption(threshold, this.dataGridView1);
+
+
+            //foreach (DataRow dr in dt.Rows)
+            //{
+               // this.dataGridView1.Rows.Add(new string[] { dr.ItemArray.GetValue()});
+            //}
+           // BindingSource bs = new BindingSource();
+            //bs.DataSource = dt;
+            //this.dataGridView1.DataSource = bs;
+             //this.dataGridView1.DataSource = dt;
         }
 
         private void HighCunsomersData_Load(object sender, EventArgs e)

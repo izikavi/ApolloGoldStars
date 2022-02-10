@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HighCunsomersData));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ClassId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.instance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.period = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.max = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +48,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.name,
+            this.ClassId,
             this.instance,
             this.period,
             this.max,
             this.avg,
             this.ExceptionsPerSec});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 252);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 151);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
@@ -67,12 +70,18 @@
             this.name.ReadOnly = true;
             this.name.Width = 150;
             // 
+            // ClassId
+            // 
+            this.ClassId.HeaderText = "ClassId";
+            this.ClassId.Name = "ClassId";
+            // 
             // instance
             // 
+            this.instance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.instance.HeaderText = "Instance ID";
             this.instance.MinimumWidth = 8;
             this.instance.Name = "instance";
-            this.instance.Width = 150;
+            this.instance.Width = 90;
             // 
             // period
             // 
@@ -140,6 +149,7 @@
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HighCunsomersData";
             this.Text = "HighCunsomersData";
             this.Load += new System.EventHandler(this.HighCunsomersData_Load);
@@ -153,6 +163,7 @@
 
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn ClassId;
         private DataGridViewTextBoxColumn instance;
         private DataGridViewTextBoxColumn period;
         private DataGridViewTextBoxColumn max;
