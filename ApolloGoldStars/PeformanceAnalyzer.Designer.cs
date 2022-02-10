@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PeformanceAnalyzer));
             this.label1 = new System.Windows.Forms.Label();
             this.PeriodicSec = new System.Windows.Forms.NumericUpDown();
@@ -38,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ThresholdNum = new System.Windows.Forms.NumericUpDown();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PeriodicSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdNum)).BeginInit();
             this.SuspendLayout();
@@ -47,18 +49,16 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(18, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(26, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 60);
+            this.label1.Size = new System.Drawing.Size(282, 90);
             this.label1.TabIndex = 0;
             this.label1.Text = "Periodic activities\r\nexecution time:";
             // 
             // PeriodicSec
             // 
             this.PeriodicSec.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PeriodicSec.Location = new System.Drawing.Point(233, 142);
-            this.PeriodicSec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PeriodicSec.Location = new System.Drawing.Point(333, 237);
             this.PeriodicSec.Maximum = new decimal(new int[] {
             3600,
             0,
@@ -70,7 +70,7 @@
             0,
             0});
             this.PeriodicSec.Name = "PeriodicSec";
-            this.PeriodicSec.Size = new System.Drawing.Size(77, 39);
+            this.PeriodicSec.Size = new System.Drawing.Size(110, 55);
             this.PeriodicSec.TabIndex = 13;
             this.PeriodicSec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PeriodicSec.Value = new decimal(new int[] {
@@ -84,19 +84,17 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(314, 145);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(449, 242);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 30);
+            this.label2.Size = new System.Drawing.Size(70, 45);
             this.label2.TabIndex = 14;
             this.label2.Text = "Sec";
             // 
             // PeriodicRunButton
             // 
-            this.PeriodicRunButton.Location = new System.Drawing.Point(233, 179);
-            this.PeriodicRunButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PeriodicRunButton.Location = new System.Drawing.Point(333, 298);
             this.PeriodicRunButton.Name = "PeriodicRunButton";
-            this.PeriodicRunButton.Size = new System.Drawing.Size(78, 20);
+            this.PeriodicRunButton.Size = new System.Drawing.Size(111, 33);
             this.PeriodicRunButton.TabIndex = 16;
             this.PeriodicRunButton.Text = "Run";
             this.PeriodicRunButton.UseVisualStyleBackColor = true;
@@ -105,17 +103,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(396, 138);
+            this.label3.Location = new System.Drawing.Point(566, 230);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 15);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 17;
             // 
             // HighObjButton
             // 
-            this.HighObjButton.Location = new System.Drawing.Point(232, 281);
-            this.HighObjButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HighObjButton.Location = new System.Drawing.Point(331, 468);
             this.HighObjButton.Name = "HighObjButton";
-            this.HighObjButton.Size = new System.Drawing.Size(78, 20);
+            this.HighObjButton.Size = new System.Drawing.Size(111, 33);
             this.HighObjButton.TabIndex = 18;
             this.HighObjButton.Text = "Run";
             this.HighObjButton.UseVisualStyleBackColor = true;
@@ -126,10 +124,9 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(18, 248);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(26, 413);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 60);
+            this.label4.Size = new System.Drawing.Size(225, 90);
             this.label4.TabIndex = 19;
             this.label4.Text = "High objects\r\nconsumption:";
             // 
@@ -138,25 +135,23 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(314, 248);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(449, 413);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 30);
+            this.label5.Size = new System.Drawing.Size(213, 45);
             this.label5.TabIndex = 21;
             this.label5.Text = "μs Threshold";
             // 
             // ThresholdNum
             // 
             this.ThresholdNum.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ThresholdNum.Location = new System.Drawing.Point(233, 245);
-            this.ThresholdNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ThresholdNum.Location = new System.Drawing.Point(333, 408);
             this.ThresholdNum.Maximum = new decimal(new int[] {
             50000,
             0,
             0,
             0});
             this.ThresholdNum.Name = "ThresholdNum";
-            this.ThresholdNum.Size = new System.Drawing.Size(77, 39);
+            this.ThresholdNum.Size = new System.Drawing.Size(110, 55);
             this.ThresholdNum.TabIndex = 20;
             this.ThresholdNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ThresholdNum.Value = new decimal(new int[] {
@@ -167,11 +162,11 @@
             // 
             // PeformanceAnalyzer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(1143, 748);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ThresholdNum);
             this.Controls.Add(this.label4);
@@ -183,9 +178,9 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "PeformanceAnalyzer";
             this.Text = "PeformanceAnalyzer";
-            this.Load += new System.EventHandler(this.PeformanceAnalyzer_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.PeriodicSec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThresholdNum)).EndInit();
             this.ResumeLayout(false);
@@ -204,5 +199,6 @@
         private Label label4;
         private Label label5;
         private NumericUpDown ThresholdNum;
+        private ToolTip toolTip1;
     }
 }
