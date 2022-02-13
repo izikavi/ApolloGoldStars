@@ -16,5 +16,10 @@ namespace ApolloGoldStars
         {
             InitializeComponent();
         }
+
+        private void UserScript_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("this part is on development", "Not working");
+        }
     }
 }

@@ -96,6 +96,7 @@
             // ConnectButton
             // 
             this.ConnectButton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
+            this.ConnectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ConnectButton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.ConnectButton.Location = new System.Drawing.Point(203, 518);
             this.ConnectButton.Name = "ConnectButton";

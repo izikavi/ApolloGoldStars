@@ -209,11 +209,13 @@
             // 
             this.ShowScreenCheckBox.AutoSize = true;
             this.ShowScreenCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.ShowScreenCheckBox.Checked = true;
+            this.ShowScreenCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ShowScreenCheckBox.Location = new System.Drawing.Point(424, 439);
             this.ShowScreenCheckBox.Name = "ShowScreenCheckBox";
-            this.ShowScreenCheckBox.Size = new System.Drawing.Size(125, 29);
+            this.ShowScreenCheckBox.Size = new System.Drawing.Size(159, 29);
             this.ShowScreenCheckBox.TabIndex = 21;
-            this.ShowScreenCheckBox.Text = "Save to file";
+            this.ShowScreenCheckBox.Text = "Show to screan";
             this.ShowScreenCheckBox.UseVisualStyleBackColor = false;
             // 
             // LoggerCreator
