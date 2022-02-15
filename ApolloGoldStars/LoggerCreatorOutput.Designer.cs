@@ -51,7 +51,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ApolloGoldStars.Properties.Resources.ribbon;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(381, 750);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;

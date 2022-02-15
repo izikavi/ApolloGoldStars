@@ -49,6 +49,8 @@ namespace ApolloGoldStars
             WriteLine(Username);
             System.Threading.Thread.Sleep(100);
             s += Read();
+            if (s.TrimEnd().EndsWith("#"))
+                return s;
             if (!s.TrimEnd().EndsWith(":"))
                 throw new Exception("Failed to connect : no password prompt");
             WriteLine(Password);
