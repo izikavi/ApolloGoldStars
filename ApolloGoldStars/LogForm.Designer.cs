@@ -40,11 +40,14 @@
             this.LoggerCreator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LoggerCreator.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.LoggerCreator.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.LoggerCreator.Image = global::ApolloGoldStars.Properties.Resources.post;
+            this.LoggerCreator.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.LoggerCreator.Location = new System.Drawing.Point(12, 189);
             this.LoggerCreator.Name = "LoggerCreator";
             this.LoggerCreator.Size = new System.Drawing.Size(219, 141);
             this.LoggerCreator.TabIndex = 0;
             this.LoggerCreator.Text = "Logger\r\nCreator";
+            this.LoggerCreator.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LoggerCreator.UseVisualStyleBackColor = false;
             this.LoggerCreator.Click += new System.EventHandler(this.LoggerCreator_Click);
             // 
@@ -53,11 +56,14 @@
             this.PerformanceAnalyzer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.PerformanceAnalyzer.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.PerformanceAnalyzer.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.PerformanceAnalyzer.Image = global::ApolloGoldStars.Properties.Resources.timer_cog_outline;
+            this.PerformanceAnalyzer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.PerformanceAnalyzer.Location = new System.Drawing.Point(262, 189);
             this.PerformanceAnalyzer.Name = "PerformanceAnalyzer";
             this.PerformanceAnalyzer.Size = new System.Drawing.Size(229, 141);
             this.PerformanceAnalyzer.TabIndex = 1;
             this.PerformanceAnalyzer.Text = "Performance Analyzer";
+            this.PerformanceAnalyzer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.PerformanceAnalyzer.UseVisualStyleBackColor = false;
             this.PerformanceAnalyzer.Click += new System.EventHandler(this.PerformanceAnalyzer_Click);
             // 
@@ -66,11 +72,14 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button1.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.button1.Image = global::ApolloGoldStars.Properties.Resources.information_outline;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button1.Location = new System.Drawing.Point(264, 375);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(227, 141);
             this.button1.TabIndex = 3;
             this.button1.Text = "Application Support";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -79,11 +88,14 @@
             this.Scriptbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Scriptbutton.BackgroundImage = global::ApolloGoldStars.Properties.Resources.Screenshot_2022_02_10_124704;
             this.Scriptbutton.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Scriptbutton.Image = global::ApolloGoldStars.Properties.Resources.script_text_play_outline;
+            this.Scriptbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Scriptbutton.Location = new System.Drawing.Point(12, 375);
             this.Scriptbutton.Name = "Scriptbutton";
             this.Scriptbutton.Size = new System.Drawing.Size(219, 141);
             this.Scriptbutton.TabIndex = 2;
             this.Scriptbutton.Text = "Run User\r\nScript";
+            this.Scriptbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Scriptbutton.UseVisualStyleBackColor = false;
             this.Scriptbutton.Click += new System.EventHandler(this.Scriptbutton_Click);
             // 

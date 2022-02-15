@@ -83,9 +83,49 @@ namespace ApolloGoldStars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap information_outline {
+            get {
+                object obj = ResourceManager.GetObject("information-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login__1_ {
+            get {
+                object obj = ResourceManager.GetObject("login (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap login__2_ {
+            get {
+                object obj = ResourceManager.GetObject("login (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MicrosoftTeams_image__1_ {
             get {
                 object obj = ResourceManager.GetObject("MicrosoftTeams-image (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap post {
+            get {
+                object obj = ResourceManager.GetObject("post", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +156,26 @@ namespace ApolloGoldStars.Properties {
         internal static System.Drawing.Bitmap Screenshot_2022_02_10_124704 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot 2022-02-10 124704", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap script_text_play_outline {
+            get {
+                object obj = ResourceManager.GetObject("script-text-play-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap timer_cog_outline {
+            get {
+                object obj = ResourceManager.GetObject("timer-cog-outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
